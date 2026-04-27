@@ -1,0 +1,36 @@
+{
+  "date": "2026-04-27",
+  "timestamp": "2026-04-27 23:01:31",
+  "data": {
+    "equities": {
+      "S&P 500": 7173.91015625,
+      "EuroStoxx 50": 5860.31982421875,
+      "FTSE MIB": 47673.91015625
+    },
+    "interest_rates": {
+      "US 10Y Treasury": 4.335999965667725,
+      "US 2Y Treasury": 3.5900001525878906,
+      "US 30Y Treasury": 4.941999912261963,
+      "EUR Corporate Bonds": 109.29000091552734,
+      "EUR High Yield Bonds": 80.51000213623047,
+      "EUR Emerging Markets": 82.33999633789062
+    },
+    "credit": {
+      "VIX": 18.020000457763672,
+      "HY OAS": 80.51000213623047,
+      "Investment Grade": 109.29000091552734
+    },
+    "forex": {
+      "EUR/USD": 1.1727453470230103,
+      "EUR/GBP": 0.8656499981880188,
+      "USD/JPY": 159.41099548339844,
+      "GBP/USD": 1.3540594577789307
+    },
+    "commodities": {
+      "Brent Crude": 101.76000213623047,
+      "Gold": 4694.2998046875,
+      "Natural Gas": 2.7300000190734863,
+      "Silver": 75.43499755859375
+    }
+  }
+}
