@@ -21,6 +21,19 @@ def fetch_risk_data(data_dir="data"):
     return snapshot
 
 
+def fetch_historical_data(data_dir="data", years=3):
+    """Fetch 3-4 years of historical data."""
+    aggregator = RiskDashboardAggregator(data_dir=data_dir)
+    logger.info(f"Fetching {years} years of historical data...")
+    historical = aggregator.fetch_and_save_historical_data(years=years)
+    if not historical.empty:
+        logger.info(f"✓ Successfully loaded {len(historical)} trading days of data")
+        logger.info(f"  Date range: {historical['date'].min()} to {historical['date'].max()}")
+    else:
+        logger.error("✗ Failed to fetch historical data - no data returned")
+    return historical
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Risk Dashboard CLI - Fetch data or launch Streamlit dashboard"
@@ -28,14 +41,21 @@ def main():
 
     parser.add_argument(
         "command",
-        choices=["fetch", "dashboard"],
-        help="Command to execute: 'fetch' for data collection, 'dashboard' to launch UI"
+        choices=["fetch", "fetch-history", "dashboard"],
+        help="Command: 'fetch' = daily data, 'fetch-history' = 3-4 years historical, 'dashboard' = UI"
     )
 
     parser.add_argument(
         "--data-dir",
         default="data",
         help="Directory to store data files (default: data)"
+    )
+
+    parser.add_argument(
+        "--years",
+        type=int,
+        default=3,
+        help="Years of historical data to fetch (1-4, default: 3)"
     )
 
     args = parser.parse_args()
@@ -56,9 +76,29 @@ def main():
                     print(f"  {metric}: N/A")
         print("="*60)
 
+    elif args.command == "fetch-history":
+        logger.info(f"Fetching {args.years} years of historical data...")
+        historical = fetch_historical_data(data_dir=args.data_dir, years=args.years)
+        if not historical.empty:
+            logger.info("✓ Historical data fetch completed successfully")
+            print("\n" + "="*60)
+            print("HISTORICAL DATA SUMMARY")
+            print("="*60)
+            print(f"Trading days: {len(historical)}")
+            print(f"Date range: {historical['date'].min()} to {historical['date'].max()}")
+            print(f"Metrics: {len([c for c in historical.columns if c != 'date'])}")
+            print("="*60)
+        else:
+            logger.error("✗ Historical data fetch failed")
+            print("\n" + "="*60)
+            print("HISTORICAL DATA FETCH FAILED")
+            print("="*60)
+            print("No data was collected. Check logs for details.")
+            print("="*60)
+
     elif args.command == "dashboard":
         logger.info("Launching Streamlit dashboard...")
-        import streamlit.cli as stcli
+        import streamlit.web.cli as stcli
         sys.argv = ["streamlit", "run", "dashboard.py"]
         stcli.main()
 

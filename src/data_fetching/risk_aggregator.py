@@ -11,6 +11,8 @@ from src.data_fetching.interest_rates_fetcher import InterestRateFetcher
 from src.data_fetching.credit_fetcher import CreditFetcher
 from src.data_fetching.fx_fetcher import FXFetcher
 from src.data_fetching.commodities_fetcher import CommoditiesFetcher
+from src.data_fetching.crypto_fetcher import CryptoFetcher
+from src.data_fetching.historical_fetcher import HistoricalDataFetcher
 
 logger = get_logger(__name__)
 
@@ -28,6 +30,8 @@ class RiskDashboardAggregator:
         self.credit_fetcher = CreditFetcher(data_dir=str(self.data_dir))
         self.fx_fetcher = FXFetcher(data_dir=str(self.data_dir))
         self.commodities_fetcher = CommoditiesFetcher(data_dir=str(self.data_dir))
+        self.crypto_fetcher = CryptoFetcher(data_dir=str(self.data_dir))
+        self.historical_fetcher = HistoricalDataFetcher(data_dir=str(self.data_dir))
 
     def fetch_all_risk_factors(self):
         """Fetch all risk factors and aggregate results."""
@@ -51,6 +55,7 @@ class RiskDashboardAggregator:
             ("credit", self.credit_fetcher),
             ("forex", self.fx_fetcher),
             ("commodities", self.commodities_fetcher),
+            ("crypto", self.crypto_fetcher),
         ]
 
         for asset_class, fetcher in fetchers:
@@ -100,6 +105,7 @@ class RiskDashboardAggregator:
         self.credit_fetcher.save_daily_snapshot()
         self.fx_fetcher.save_daily_snapshot()
         self.commodities_fetcher.save_daily_snapshot()
+        self.crypto_fetcher.save_daily_snapshot()
 
         logger.info("\n" + "=" * 60)
         logger.info("Daily risk factors snapshot completed!")
@@ -141,3 +147,26 @@ class RiskDashboardAggregator:
             logger.error(f"Failed to load historical data: {e}")
             return pd.DataFrame()
 
+    def load_full_historical_data(self):
+        """Load full 3+ years of cumulative historical data."""
+        try:
+            historical_file = self.data_dir / "historical_data.csv"
+            if historical_file.exists():
+                df = pd.read_csv(historical_file)
+                logger.info(f"Loaded {len(df)} rows of historical data ({df['date'].min()} to {df['date'].max()})")
+                return df
+            else:
+                logger.warning("Historical data file not found. Run fetch_historical_data() first.")
+                return pd.DataFrame()
+        except Exception as e:
+            logger.error(f"Failed to load historical data file: {e}")
+            return pd.DataFrame()
+
+    def fetch_and_save_historical_data(self, years=3):
+        """Fetch 3-4 years of historical data. Run this once to initialize."""
+        try:
+            fetcher = HistoricalDataFetcher(data_dir=str(self.data_dir), years=years)
+            return fetcher.fetch_historical_data()
+        except Exception as e:
+            logger.error(f"Failed to fetch historical data: {e}")
+            return pd.DataFrame()

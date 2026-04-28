@@ -100,6 +100,28 @@ def main():
 
         st.divider()
 
+        # Historical data fetch (show only if not already loaded)
+        if aggregator.load_full_historical_data().empty:
+            st.subheader("📅 Historical Data Setup")
+            hist_years = st.radio("Years of history:", [1, 2, 3, 4], value=3, help="First time only - takes a few minutes")
+            if st.button("🔄 Fetch 3-4 Year History", use_container_width=True, help="Initialize historical data database"):
+                with st.spinner("Fetching 3-4 years of historical data (this may take 3-5 minutes)..."):
+                    try:
+                        hist_data = aggregator.fetch_and_save_historical_data(years=hist_years)
+                        if not hist_data.empty:
+                            st.success(f"✓ Loaded {len(hist_data)} trading days of historical data!")
+                            st.rerun()
+                        else:
+                            st.error("✗ Failed to load historical data")
+                    except Exception as e:
+                        st.error(f"✗ Error: {e}")
+        else:
+            latest_hist = aggregator.load_full_historical_data()
+            if not latest_hist.empty:
+                st.success(f"✅ Historical data loaded: {latest_hist['date'].min()} to {latest_hist['date'].max()}")
+
+        st.divider()
+
         # Settings
         st.subheader("Display Settings")
         show_historical = st.checkbox("Show Historical Charts", value=True)
@@ -109,7 +131,14 @@ def main():
     # Main content
     # Get latest snapshot
     snapshot = aggregator.get_latest_snapshot()
-    historical = aggregator.get_historical_data(days=historical_days)
+
+    # Try to load full historical data first, fall back to recent snapshots
+    historical = aggregator.load_full_historical_data()
+    if historical.empty:
+        # Fall back to recent daily snapshots if no full history
+        historical = aggregator.get_historical_data(days=historical_days)
+        if not historical.empty:
+            st.info("📊 Using recent daily snapshots (3-4 year historical data not yet loaded). See documentation for historical data setup.")
 
     if snapshot is None:
         st.warning("⚠️ No data available. Click 'Fetch Latest Snapshot' to get started.")
@@ -127,11 +156,13 @@ def main():
     # Tabs for each asset class
     tabs = st.tabs([
         "🎯 Summary",
+        "⏰ Time Series",
         "📈 Equities",
         "📊 Interest Rates",
         "💳 Credit",
         "💱 Forex",
-        "⚫ Commodities"
+        "⚫ Commodities",
+        "₿ Cryptocurrencies"
     ])
 
     # ========== SUMMARY TAB ==========
@@ -154,8 +185,135 @@ def main():
         else:
             st.info("No data available")
 
-    # ========== EQUITIES TAB ==========
+    # ========== TIME SERIES TAB ==========
     with tabs[1]:
+        st.subheader("⏰ All Metrics - Time Series Analysis (3+ Years)")
+        
+        if historical.empty:
+            st.warning("⚠️ No historical data available. Click 'Fetch 3-4 Year History' in sidebar to get started.")
+        else:
+            # Display date range
+            date_min = pd.to_datetime(historical['date']).min()
+            date_max = pd.to_datetime(historical['date']).max()
+            date_range = f"{date_min.strftime('%Y-%m-%d')} to {date_max.strftime('%Y-%m-%d')}"
+            st.info(f"📅 Data Period: {date_range} ({len(historical)} trading days)")
+            
+            # Date range selector for filtering
+            col1, col2 = st.columns(2)
+            with col1:
+                start_date = st.date_input(
+                    "Start Date",
+                    value=date_min,
+                    min_value=date_min,
+                    max_value=date_max
+                )
+            with col2:
+                end_date = st.date_input(
+                    "End Date",
+                    value=date_max,
+                    min_value=date_min,
+                    max_value=date_max
+                )
+            
+            # Filter data by date range
+            historical_filtered = historical[
+                (pd.to_datetime(historical['date']) >= pd.Timestamp(start_date)) &
+                (pd.to_datetime(historical['date']) <= pd.Timestamp(end_date))
+            ].copy()
+            
+            if len(historical_filtered) == 0:
+                st.error("No data in selected date range")
+            else:
+                # Metric selector
+                all_metrics = [col for col in historical_filtered.columns if col not in ['date', 'timestamp']]
+                selected_metrics = st.multiselect(
+                    f"Select Metrics to Display ({len(all_metrics)} available)",
+                    all_metrics,
+                    default=all_metrics[:5] if len(all_metrics) > 5 else all_metrics,
+                    key="metrics_multiselect"
+                )
+                
+                if selected_metrics:
+                    # Create time series chart
+                    st.subheader("Time Series Values")
+                    fig = go.Figure()
+                    
+                    for metric in selected_metrics:
+                        fig.add_trace(go.Scatter(
+                            x=historical_filtered['date'],
+                            y=historical_filtered[metric],
+                            mode='lines+markers',
+                            name=metric,
+                            hovertemplate='<b>%{fullData.name}</b><br>Date: %{x}<br>Value: %{y:.4f}<extra></extra>'
+                        ))
+                    
+                    fig.update_layout(
+                        title=f"Risk Factors Time Series ({len(historical_filtered)} days)",
+                        xaxis_title="Date",
+                        yaxis_title="Value",
+                        hovermode='x unified',
+                        height=600,
+                        template='plotly_white'
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+                    
+                    # Statistics table
+                    st.subheader("Statistical Summary")
+                    stats_data = []
+                    for metric in selected_metrics:
+                        if metric in historical_filtered.columns:
+                            col_data = historical_filtered[metric].dropna()
+                            if len(col_data) > 0:
+                                stats_data.append({
+                                    "Metric": metric,
+                                    "Latest": col_data.iloc[-1],
+                                    "Previous": col_data.iloc[-2] if len(col_data) > 1 else None,
+                                    "Change": col_data.iloc[-1] - col_data.iloc[-2] if len(col_data) > 1 else None,
+                                    "Min": col_data.min(),
+                                    "Max": col_data.max(),
+                                    "Avg": col_data.mean(),
+                                    "Std Dev": col_data.std()
+                                })
+                    
+                    if stats_data:
+                        stats_df = pd.DataFrame(stats_data)
+                        st.dataframe(
+                            stats_df.style.format({
+                                "Latest": "{:.4f}",
+                                "Previous": "{:.4f}",
+                                "Change": "{:.4f}",
+                                "Min": "{:.4f}",
+                                "Max": "{:.4f}",
+                                "Avg": "{:.4f}",
+                                "Std Dev": "{:.6f}"
+                            }),
+                            use_container_width=True
+                        )
+                        
+                        # Download option
+                        csv_export = stats_df.to_csv(index=False)
+                        st.download_button(
+                            label="📥 Download Statistics as CSV",
+                            data=csv_export,
+                            file_name=f"risk_factors_stats_{datetime.now().strftime('%Y-%m-%d')}.csv",
+                            mime="text/csv"
+                        )
+                else:
+                    st.info("Please select at least one metric to display")
+                
+                # Full historical data table
+                st.subheader("Full Historical Data")
+                st.dataframe(
+                    historical_filtered.style.format({
+                        col: "{:.6f}" if historical_filtered[col].dtype in ['float64', 'float32'] else "{}"
+                        for col in historical_filtered.columns
+                    }),
+                    use_container_width=True,
+                    height=400
+                )
+
+    # ========== EQUITIES TAB ==========
+    with tabs[2]:
         st.subheader("📈 Equity Indices")
 
         equities = snapshot['data'].get('equities', {})
@@ -198,7 +356,7 @@ def main():
             st.info("No equity data available")
 
     # ========== INTEREST RATES TAB ==========
-    with tabs[2]:
+    with tabs[3]:
         st.subheader("📊 Interest Rates & Fixed Income")
 
         rates = snapshot['data'].get('interest_rates', {})
@@ -239,7 +397,7 @@ def main():
             st.info("No interest rate data available")
 
     # ========== CREDIT TAB ==========
-    with tabs[3]:
+    with tabs[4]:
         st.subheader("💳 Credit Indices")
 
         credit = snapshot['data'].get('credit', {})
@@ -280,7 +438,7 @@ def main():
             st.info("No credit data available")
 
     # ========== FOREX TAB ==========
-    with tabs[4]:
+    with tabs[5]:
         st.subheader("💱 Foreign Exchange Rates")
 
         forex = snapshot['data'].get('forex', {})
@@ -321,7 +479,7 @@ def main():
             st.info("No FX data available")
 
     # ========== COMMODITIES TAB ==========
-    with tabs[5]:
+    with tabs[6]:
         st.subheader("⚫ Commodities Prices")
 
         commodities = snapshot['data'].get('commodities', {})
@@ -360,6 +518,48 @@ def main():
                     st.plotly_chart(fig, use_container_width=True)
         else:
             st.info("No commodity data available")
+
+    # ========== CRYPTOCURRENCIES TAB ==========
+    with tabs[7]:
+        st.subheader("₿ Cryptocurrencies")
+
+        cryptocurrencies = snapshot['data'].get('cryptocurrencies', {})
+        if cryptocurrencies:
+            # Display current values
+            cols = st.columns(len(cryptocurrencies))
+            for col, (metric, value) in zip(cols, cryptocurrencies.items()):
+                with col:
+                    if value is not None:
+                        st.metric(metric, f"{value:,.2f}")
+                    else:
+                        st.metric(metric, "N/A")
+
+            # Historical chart
+            if show_historical and not historical.empty:
+                st.subheader("Cryptocurrencies - Historical Trend")
+
+                crypto_cols = [col for col in historical.columns if any(x in col for x in ['Bitcoin', 'Ethereum', 'Binance Coin', 'Solana'])]
+
+                if crypto_cols:
+                    fig = go.Figure()
+                    for col in crypto_cols:
+                        fig.add_trace(go.Scatter(
+                            x=historical['date'],
+                            y=historical[col],
+                            mode='lines+markers',
+                            name=col
+                        ))
+
+                    fig.update_layout(
+                        title="Cryptocurrencies Trend",
+                        xaxis_title="Date",
+                        yaxis_title="Value",
+                        hovermode='x unified',
+                        height=500
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.info("No cryptocurrency data available")
 
     st.divider()
 

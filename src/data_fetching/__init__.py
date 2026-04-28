@@ -5,6 +5,7 @@ from .interest_rates_fetcher import InterestRateFetcher
 from .credit_fetcher import CreditFetcher
 from .fx_fetcher import FXFetcher
 from .commodities_fetcher import CommoditiesFetcher
+from .crypto_fetcher import CryptoFetcher
 from .risk_aggregator import RiskDashboardAggregator
 
 __all__ = [
@@ -13,6 +14,6 @@ __all__ = [
     "CreditFetcher",
     "FXFetcher",
     "CommoditiesFetcher",
+    "CryptoFetcher",
     "RiskDashboardAggregator",
 ]
-
