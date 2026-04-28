@@ -20,11 +20,11 @@ class HistoricalDataFetcher:
         
         Args:
             data_dir: Directory to store data
-            years: Number of years of history to fetch (default 3, max 4)
+            years: Number of years of history to fetch (default 3, can be 1-10+)
         """
         self.data_dir = Path(data_dir)
         self.data_dir.mkdir(exist_ok=True)
-        self.years = min(years, 4)  # Cap at 4 years max
+        self.years = min(years, 100)  # Allow up to 100 years
         self.start_date = (datetime.now() - timedelta(days=365 * self.years)).strftime("%Y-%m-%d")
         self.end_date = datetime.now().strftime("%Y-%m-%d")
         self.historical_file = self.data_dir / "historical_data.csv"

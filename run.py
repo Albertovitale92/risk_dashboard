@@ -22,7 +22,7 @@ def fetch_risk_data(data_dir="data"):
 
 
 def fetch_historical_data(data_dir="data", years=3):
-    """Fetch 3-4 years of historical data."""
+    """Fetch historical data for specified number of years."""
     aggregator = RiskDashboardAggregator(data_dir=data_dir)
     logger.info(f"Fetching {years} years of historical data...")
     historical = aggregator.fetch_and_save_historical_data(years=years)
@@ -42,7 +42,7 @@ def main():
     parser.add_argument(
         "command",
         choices=["fetch", "fetch-history", "dashboard"],
-        help="Command: 'fetch' = daily data, 'fetch-history' = 3-4 years historical, 'dashboard' = UI"
+        help="Command: 'fetch' = daily data, 'fetch-history' = historical data (1-10+ years), 'dashboard' = UI"
     )
 
     parser.add_argument(
@@ -55,7 +55,7 @@ def main():
         "--years",
         type=int,
         default=3,
-        help="Years of historical data to fetch (1-4, default: 3)"
+        help="Years of historical data to fetch (1-10+, default: 3)"
     )
 
     args = parser.parse_args()

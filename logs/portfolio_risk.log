@@ -509,3 +509,1788 @@ Fetching commodities...
 2026-04-28 22:39:26 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
 2026-04-28 22:39:26 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
 2026-04-28 22:39:26 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:40:48 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:40:48 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:40:48 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:40:50 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:40:50 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:40:50 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:40:50 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:40:50 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:40:50 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:41:06 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:41:06 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:41:06 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:41:18 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:41:18 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:41:18 | INFO | src.data_fetching.risk_aggregator | Loaded 366 rows of historical data (2025-04-28 to 2026-04-28)
+2026-04-28 22:41:54 | INFO | __main__ | Fetching 4 years of historical data...
+2026-04-28 22:41:54 | INFO | __main__ | Fetching 4 years of historical data...
+2026-04-28 22:41:54 | INFO | src.data_fetching.historical_fetcher | ============================================================
+2026-04-28 22:41:54 | INFO | src.data_fetching.historical_fetcher | Fetching historical data (4 years)...
+2026-04-28 22:41:54 | INFO | src.data_fetching.historical_fetcher | Period: 2022-04-29 to 2026-04-28
+2026-04-28 22:41:54 | INFO | src.data_fetching.historical_fetcher | ============================================================
+2026-04-28 22:41:54 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for S&P 500 (^GSPC)...
+2026-04-28 22:41:55 | INFO | src.data_fetching.historical_fetcher | ✓ S&P 500: 1001 data points
+2026-04-28 22:41:55 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EuroStoxx 50 (^STOXX50E)...
+2026-04-28 22:41:55 | INFO | src.data_fetching.historical_fetcher | ✓ EuroStoxx 50: 1001 data points
+2026-04-28 22:41:55 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for FTSE MIB (FTSEMIB.MI)...
+2026-04-28 22:41:55 | INFO | src.data_fetching.historical_fetcher | ✓ FTSE MIB: 1013 data points
+2026-04-28 22:41:55 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for US 10Y Treasury (^TNX)...
+2026-04-28 22:41:56 | INFO | src.data_fetching.historical_fetcher | ✓ US 10Y Treasury: 1001 data points
+2026-04-28 22:41:56 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for US 2Y Treasury (^IRX)...
+2026-04-28 22:41:56 | INFO | src.data_fetching.historical_fetcher | ✓ US 2Y Treasury: 1001 data points
+2026-04-28 22:41:56 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for US 30Y Treasury (^TYX)...
+2026-04-28 22:41:56 | INFO | src.data_fetching.historical_fetcher | ✓ US 30Y Treasury: 1001 data points
+2026-04-28 22:41:56 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR Corporate Bonds (LQD)...
+2026-04-28 22:41:57 | INFO | src.data_fetching.historical_fetcher | ✓ EUR Corporate Bonds: 1001 data points
+2026-04-28 22:41:57 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR High Yield Bonds (HYG)...
+2026-04-28 22:41:57 | INFO | src.data_fetching.historical_fetcher | ✓ EUR High Yield Bonds: 1001 data points
+2026-04-28 22:41:57 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR Emerging Markets (VXUS)...
+2026-04-28 22:41:57 | INFO | src.data_fetching.historical_fetcher | ✓ EUR Emerging Markets: 1001 data points
+2026-04-28 22:41:57 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for VIX (^VIX)...
+2026-04-28 22:41:57 | INFO | src.data_fetching.historical_fetcher | ✓ VIX: 1001 data points
+2026-04-28 22:41:57 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for HY OAS (HYG)...
+2026-04-28 22:41:58 | INFO | src.data_fetching.historical_fetcher | ✓ HY OAS: 1001 data points
+2026-04-28 22:41:58 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Investment Grade (LQD)...
+2026-04-28 22:41:58 | INFO | src.data_fetching.historical_fetcher | ✓ Investment Grade: 1001 data points
+2026-04-28 22:41:58 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR/USD (EURUSD=X)...
+2026-04-28 22:41:58 | INFO | src.data_fetching.historical_fetcher | ✓ EUR/USD: 1038 data points
+2026-04-28 22:41:58 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR/GBP (EURGBP=X)...
+2026-04-28 22:41:58 | INFO | src.data_fetching.historical_fetcher | ✓ EUR/GBP: 1038 data points
+2026-04-28 22:41:58 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for USD/JPY (USDJPY=X)...
+2026-04-28 22:41:58 | INFO | src.data_fetching.historical_fetcher | ✓ USD/JPY: 1038 data points
+2026-04-28 22:41:58 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for GBP/USD (GBPUSD=X)...
+2026-04-28 22:41:59 | INFO | src.data_fetching.historical_fetcher | ✓ GBP/USD: 1038 data points
+2026-04-28 22:41:59 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Brent Crude (BZ=F)...
+2026-04-28 22:41:59 | INFO | src.data_fetching.historical_fetcher | ✓ Brent Crude: 1004 data points
+2026-04-28 22:41:59 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Gold (GC=F)...
+2026-04-28 22:41:59 | INFO | src.data_fetching.historical_fetcher | ✓ Gold: 1003 data points
+2026-04-28 22:41:59 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Natural Gas (NG=F)...
+2026-04-28 22:41:59 | INFO | src.data_fetching.historical_fetcher | ✓ Natural Gas: 1004 data points
+2026-04-28 22:41:59 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Silver (SI=F)...
+2026-04-28 22:42:00 | INFO | src.data_fetching.historical_fetcher | ✓ Silver: 1003 data points
+2026-04-28 22:42:00 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Bitcoin (BTC-USD)...
+2026-04-28 22:42:00 | INFO | src.data_fetching.historical_fetcher | ✓ Bitcoin: 1460 data points
+2026-04-28 22:42:00 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Ethereum (ETH-USD)...
+2026-04-28 22:42:00 | INFO | src.data_fetching.historical_fetcher | ✓ Ethereum: 1460 data points
+2026-04-28 22:42:00 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Binance Coin (BNB-USD)...
+2026-04-28 22:42:01 | INFO | src.data_fetching.historical_fetcher | ✓ Binance Coin: 1460 data points
+2026-04-28 22:42:01 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Solana (SOL-USD)...
+2026-04-28 22:42:01 | INFO | src.data_fetching.historical_fetcher | ✓ Solana: 1460 data points
+2026-04-28 22:42:01 | INFO | src.data_fetching.historical_fetcher | 
+✓ Historical data saved to data\historical_data.csv
+2026-04-28 22:42:01 | INFO | src.data_fetching.historical_fetcher |   Rows: 1461 trading days
+2026-04-28 22:42:01 | INFO | src.data_fetching.historical_fetcher |   Columns: 24 metrics
+2026-04-28 22:42:01 | INFO | src.data_fetching.historical_fetcher | 
+============================================================
+2026-04-28 22:42:01 | INFO | src.data_fetching.historical_fetcher | Historical data fetch completed!
+2026-04-28 22:42:01 | INFO | src.data_fetching.historical_fetcher | ============================================================
+2026-04-28 22:42:01 | INFO | __main__ | ✓ Successfully loaded 1461 trading days of data
+2026-04-28 22:42:01 | INFO | __main__ |   Date range: 2022-04-29 to 2026-04-28
+2026-04-28 22:42:01 | INFO | __main__ | ✓ Historical data fetch completed successfully
+2026-04-28 22:43:57 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:43:57 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:43:57 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:44:09 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:44:09 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:44:09 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:44:36 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:44:36 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:44:36 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:44:40 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:44:40 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:44:40 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-759' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-762' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-765' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-768' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-771' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-774' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-777' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-780' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-783' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-786' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-789' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-792' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-795' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-798' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-801' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:44:43 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-804' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:45:02 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:45:02 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:45:02 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:45:08 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:45:08 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:45:08 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:45:17 | INFO | __main__ | Fetching daily risk factors...
+2026-04-28 22:45:17 | INFO | src.data_fetching.risk_aggregator | ============================================================
+2026-04-28 22:45:17 | INFO | src.data_fetching.risk_aggregator | Starting daily risk factors fetch...
+2026-04-28 22:45:17 | INFO | src.data_fetching.risk_aggregator | ============================================================
+2026-04-28 22:45:17 | INFO | src.data_fetching.risk_aggregator | 
+Fetching equities...
+2026-04-28 22:45:17 | INFO | src.data_fetching.equity_fetcher | Fetching S&P 500 (^GSPC)...
+2026-04-28 22:45:18 | INFO | src.data_fetching.equity_fetcher | S&P 500: 7138.80
+2026-04-28 22:45:18 | INFO | src.data_fetching.equity_fetcher | Fetching EuroStoxx 50 (^STOXX50E)...
+2026-04-28 22:45:18 | INFO | src.data_fetching.equity_fetcher | EuroStoxx 50: 5836.10
+2026-04-28 22:45:18 | INFO | src.data_fetching.equity_fetcher | Fetching FTSE MIB (FTSEMIB.MI)...
+2026-04-28 22:45:18 | INFO | src.data_fetching.equity_fetcher | FTSE MIB: 48040.24
+2026-04-28 22:45:18 | INFO | src.data_fetching.risk_aggregator | ✓ equities fetched successfully
+2026-04-28 22:45:18 | INFO | src.data_fetching.risk_aggregator | 
+Fetching interest_rates...
+2026-04-28 22:45:18 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 10Y Treasury (^TNX)...
+2026-04-28 22:45:18 | INFO | src.data_fetching.interest_rates_fetcher | US 10Y Treasury: 4.3540
+2026-04-28 22:45:18 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 2Y Treasury (^IRX)...
+2026-04-28 22:45:19 | INFO | src.data_fetching.interest_rates_fetcher | US 2Y Treasury: 3.5900
+2026-04-28 22:45:19 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 30Y Treasury (^TYX)...
+2026-04-28 22:45:19 | INFO | src.data_fetching.interest_rates_fetcher | US 30Y Treasury: 4.9440
+2026-04-28 22:45:19 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR Corporate Bonds (LQD)...
+2026-04-28 22:45:19 | INFO | src.data_fetching.interest_rates_fetcher | EUR Corporate Bonds: 109.3400
+2026-04-28 22:45:19 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR High Yield Bonds (HYG)...
+2026-04-28 22:45:19 | INFO | src.data_fetching.interest_rates_fetcher | EUR High Yield Bonds: 80.4000
+2026-04-28 22:45:19 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR Emerging Markets (VXUS)...
+2026-04-28 22:45:19 | INFO | src.data_fetching.interest_rates_fetcher | EUR Emerging Markets: 81.8900
+2026-04-28 22:45:19 | INFO | src.data_fetching.risk_aggregator | ✓ interest_rates fetched successfully
+2026-04-28 22:45:19 | INFO | src.data_fetching.risk_aggregator | 
+Fetching credit...
+2026-04-28 22:45:19 | INFO | src.data_fetching.credit_fetcher | Fetching VIX (^VIX)...
+2026-04-28 22:45:19 | INFO | src.data_fetching.credit_fetcher | VIX: 17.83
+2026-04-28 22:45:19 | INFO | src.data_fetching.credit_fetcher | Fetching HY OAS (HYG)...
+2026-04-28 22:45:19 | INFO | src.data_fetching.credit_fetcher | HY OAS: 80.40
+2026-04-28 22:45:19 | INFO | src.data_fetching.credit_fetcher | Fetching Investment Grade (LQD)...
+2026-04-28 22:45:19 | INFO | src.data_fetching.credit_fetcher | Investment Grade: 109.34
+2026-04-28 22:45:19 | INFO | src.data_fetching.risk_aggregator | ✓ credit fetched successfully
+2026-04-28 22:45:19 | INFO | src.data_fetching.risk_aggregator | 
+Fetching forex...
+2026-04-28 22:45:19 | INFO | src.data_fetching.fx_fetcher | Fetching EUR/USD (EURUSD=X)...
+2026-04-28 22:45:19 | INFO | src.data_fetching.fx_fetcher | EUR/USD: 1.171783
+2026-04-28 22:45:19 | INFO | src.data_fetching.fx_fetcher | Fetching EUR/GBP (EURGBP=X)...
+2026-04-28 22:45:19 | INFO | src.data_fetching.fx_fetcher | EUR/GBP: 0.866270
+2026-04-28 22:45:19 | INFO | src.data_fetching.fx_fetcher | Fetching USD/JPY (USDJPY=X)...
+2026-04-28 22:45:19 | INFO | src.data_fetching.fx_fetcher | USD/JPY: 159.600006
+2026-04-28 22:45:19 | INFO | src.data_fetching.fx_fetcher | Fetching GBP/USD (GBPUSD=X)...
+2026-04-28 22:45:19 | INFO | src.data_fetching.fx_fetcher | GBP/USD: 1.352174
+2026-04-28 22:45:19 | INFO | src.data_fetching.risk_aggregator | ✓ forex fetched successfully
+2026-04-28 22:45:19 | INFO | src.data_fetching.risk_aggregator | 
+Fetching commodities...
+2026-04-28 22:45:19 | INFO | src.data_fetching.commodities_fetcher | Fetching Brent Crude (BZ=F)...
+2026-04-28 22:45:20 | INFO | src.data_fetching.commodities_fetcher | Brent Crude: 104.13
+2026-04-28 22:45:20 | INFO | src.data_fetching.commodities_fetcher | Fetching Gold (GC=F)...
+2026-04-28 22:45:20 | INFO | src.data_fetching.commodities_fetcher | Gold: 4608.40
+2026-04-28 22:45:20 | INFO | src.data_fetching.commodities_fetcher | Fetching Natural Gas (NG=F)...
+2026-04-28 22:45:20 | INFO | src.data_fetching.commodities_fetcher | Natural Gas: 2.68
+2026-04-28 22:45:20 | INFO | src.data_fetching.commodities_fetcher | Fetching Silver (SI=F)...
+2026-04-28 22:45:20 | INFO | src.data_fetching.commodities_fetcher | Silver: 73.57
+2026-04-28 22:45:20 | INFO | src.data_fetching.risk_aggregator | ✓ commodities fetched successfully
+2026-04-28 22:45:20 | INFO | src.data_fetching.risk_aggregator | 
+Fetching crypto...
+2026-04-28 22:45:20 | INFO | src.data_fetching.crypto_fetcher | Fetching Bitcoin (BTC-USD)...
+2026-04-28 22:45:20 | INFO | src.data_fetching.crypto_fetcher | Bitcoin: $76433.71
+2026-04-28 22:45:20 | INFO | src.data_fetching.crypto_fetcher | Fetching Ethereum (ETH-USD)...
+2026-04-28 22:45:20 | INFO | src.data_fetching.crypto_fetcher | Ethereum: $2295.92
+2026-04-28 22:45:20 | INFO | src.data_fetching.crypto_fetcher | Fetching Binance Coin (BNB-USD)...
+2026-04-28 22:45:20 | INFO | src.data_fetching.crypto_fetcher | Binance Coin: $624.00
+2026-04-28 22:45:20 | INFO | src.data_fetching.crypto_fetcher | Fetching Solana (SOL-USD)...
+2026-04-28 22:45:20 | INFO | src.data_fetching.crypto_fetcher | Solana: $83.82
+2026-04-28 22:45:20 | INFO | src.data_fetching.risk_aggregator | ✓ crypto fetched successfully
+2026-04-28 22:45:20 | INFO | src.data_fetching.risk_aggregator | 
+✓ Full snapshot saved to data\risk_snapshot_2026-04-28.json
+2026-04-28 22:45:20 | INFO | src.data_fetching.risk_aggregator | ✓ Flattened snapshot saved to data\risk_snapshot_2026-04-28.csv
+2026-04-28 22:45:20 | INFO | src.data_fetching.equity_fetcher | Fetching S&P 500 (^GSPC)...
+2026-04-28 22:45:20 | INFO | src.data_fetching.equity_fetcher | S&P 500: 7138.80
+2026-04-28 22:45:20 | INFO | src.data_fetching.equity_fetcher | Fetching EuroStoxx 50 (^STOXX50E)...
+2026-04-28 22:45:20 | INFO | src.data_fetching.equity_fetcher | EuroStoxx 50: 5836.10
+2026-04-28 22:45:20 | INFO | src.data_fetching.equity_fetcher | Fetching FTSE MIB (FTSEMIB.MI)...
+2026-04-28 22:45:20 | INFO | src.data_fetching.equity_fetcher | FTSE MIB: 48040.24
+2026-04-28 22:45:20 | INFO | src.data_fetching.equity_fetcher | Equities saved to data/equities_2026-04-28.csv
+2026-04-28 22:45:20 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 10Y Treasury (^TNX)...
+2026-04-28 22:45:20 | INFO | src.data_fetching.interest_rates_fetcher | US 10Y Treasury: 4.3540
+2026-04-28 22:45:20 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 2Y Treasury (^IRX)...
+2026-04-28 22:45:20 | INFO | src.data_fetching.interest_rates_fetcher | US 2Y Treasury: 3.5900
+2026-04-28 22:45:20 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 30Y Treasury (^TYX)...
+2026-04-28 22:45:21 | INFO | src.data_fetching.interest_rates_fetcher | US 30Y Treasury: 4.9440
+2026-04-28 22:45:21 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR Corporate Bonds (LQD)...
+2026-04-28 22:45:21 | INFO | src.data_fetching.interest_rates_fetcher | EUR Corporate Bonds: 109.3400
+2026-04-28 22:45:21 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR High Yield Bonds (HYG)...
+2026-04-28 22:45:21 | INFO | src.data_fetching.interest_rates_fetcher | EUR High Yield Bonds: 80.4000
+2026-04-28 22:45:21 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR Emerging Markets (VXUS)...
+2026-04-28 22:45:21 | INFO | src.data_fetching.interest_rates_fetcher | EUR Emerging Markets: 81.8900
+2026-04-28 22:45:21 | INFO | src.data_fetching.interest_rates_fetcher | Interest rates saved to data/interest_rates_2026-04-28.csv
+2026-04-28 22:45:21 | INFO | src.data_fetching.credit_fetcher | Fetching VIX (^VIX)...
+2026-04-28 22:45:21 | INFO | src.data_fetching.credit_fetcher | VIX: 17.83
+2026-04-28 22:45:21 | INFO | src.data_fetching.credit_fetcher | Fetching HY OAS (HYG)...
+2026-04-28 22:45:21 | INFO | src.data_fetching.credit_fetcher | HY OAS: 80.40
+2026-04-28 22:45:21 | INFO | src.data_fetching.credit_fetcher | Fetching Investment Grade (LQD)...
+2026-04-28 22:45:21 | INFO | src.data_fetching.credit_fetcher | Investment Grade: 109.34
+2026-04-28 22:45:21 | INFO | src.data_fetching.credit_fetcher | Credit indices saved to data/credit_2026-04-28.csv
+2026-04-28 22:45:21 | INFO | src.data_fetching.fx_fetcher | Fetching EUR/USD (EURUSD=X)...
+2026-04-28 22:45:21 | INFO | src.data_fetching.fx_fetcher | EUR/USD: 1.171783
+2026-04-28 22:45:21 | INFO | src.data_fetching.fx_fetcher | Fetching EUR/GBP (EURGBP=X)...
+2026-04-28 22:45:21 | INFO | src.data_fetching.fx_fetcher | EUR/GBP: 0.866270
+2026-04-28 22:45:21 | INFO | src.data_fetching.fx_fetcher | Fetching USD/JPY (USDJPY=X)...
+2026-04-28 22:45:21 | INFO | src.data_fetching.fx_fetcher | USD/JPY: 159.600006
+2026-04-28 22:45:21 | INFO | src.data_fetching.fx_fetcher | Fetching GBP/USD (GBPUSD=X)...
+2026-04-28 22:45:21 | INFO | src.data_fetching.fx_fetcher | GBP/USD: 1.352174
+2026-04-28 22:45:21 | INFO | src.data_fetching.fx_fetcher | FX rates saved to data/forex_2026-04-28.csv
+2026-04-28 22:45:21 | INFO | src.data_fetching.commodities_fetcher | Fetching Brent Crude (BZ=F)...
+2026-04-28 22:45:21 | INFO | src.data_fetching.commodities_fetcher | Brent Crude: 104.13
+2026-04-28 22:45:21 | INFO | src.data_fetching.commodities_fetcher | Fetching Gold (GC=F)...
+2026-04-28 22:45:21 | INFO | src.data_fetching.commodities_fetcher | Gold: 4608.40
+2026-04-28 22:45:21 | INFO | src.data_fetching.commodities_fetcher | Fetching Natural Gas (NG=F)...
+2026-04-28 22:45:21 | INFO | src.data_fetching.commodities_fetcher | Natural Gas: 2.68
+2026-04-28 22:45:21 | INFO | src.data_fetching.commodities_fetcher | Fetching Silver (SI=F)...
+2026-04-28 22:45:21 | INFO | src.data_fetching.commodities_fetcher | Silver: 73.57
+2026-04-28 22:45:21 | INFO | src.data_fetching.commodities_fetcher | Commodities saved to data/commodities_2026-04-28.csv
+2026-04-28 22:45:21 | INFO | src.data_fetching.crypto_fetcher | Fetching Bitcoin (BTC-USD)...
+2026-04-28 22:45:22 | INFO | src.data_fetching.crypto_fetcher | Bitcoin: $76433.71
+2026-04-28 22:45:22 | INFO | src.data_fetching.crypto_fetcher | Fetching Ethereum (ETH-USD)...
+2026-04-28 22:45:22 | INFO | src.data_fetching.crypto_fetcher | Ethereum: $2295.92
+2026-04-28 22:45:22 | INFO | src.data_fetching.crypto_fetcher | Fetching Binance Coin (BNB-USD)...
+2026-04-28 22:45:22 | INFO | src.data_fetching.crypto_fetcher | Binance Coin: $624.00
+2026-04-28 22:45:22 | INFO | src.data_fetching.crypto_fetcher | Fetching Solana (SOL-USD)...
+2026-04-28 22:45:22 | INFO | src.data_fetching.crypto_fetcher | Solana: $83.82
+2026-04-28 22:45:22 | INFO | src.data_fetching.crypto_fetcher | Cryptocurrencies saved to data/cryptocurrencies_2026-04-28.csv
+2026-04-28 22:45:22 | INFO | src.data_fetching.risk_aggregator | 
+============================================================
+2026-04-28 22:45:22 | INFO | src.data_fetching.risk_aggregator | Daily risk factors snapshot completed!
+2026-04-28 22:45:22 | INFO | src.data_fetching.risk_aggregator | ============================================================
+2026-04-28 22:45:22 | INFO | __main__ | ✓ Fetch completed successfully
+2026-04-28 22:45:29 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:45:29 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:45:29 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:45:44 | INFO | __main__ | Fetching 4 years of historical data...
+2026-04-28 22:45:44 | INFO | __main__ | Fetching 4 years of historical data...
+2026-04-28 22:45:44 | INFO | src.data_fetching.historical_fetcher | ============================================================
+2026-04-28 22:45:44 | INFO | src.data_fetching.historical_fetcher | Fetching historical data (4 years)...
+2026-04-28 22:45:44 | INFO | src.data_fetching.historical_fetcher | Period: 2022-04-29 to 2026-04-28
+2026-04-28 22:45:44 | INFO | src.data_fetching.historical_fetcher | ============================================================
+2026-04-28 22:45:44 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for S&P 500 (^GSPC)...
+2026-04-28 22:45:45 | INFO | src.data_fetching.historical_fetcher | ✓ S&P 500: 1001 data points
+2026-04-28 22:45:45 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EuroStoxx 50 (^STOXX50E)...
+2026-04-28 22:45:46 | INFO | src.data_fetching.historical_fetcher | ✓ EuroStoxx 50: 1001 data points
+2026-04-28 22:45:46 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for FTSE MIB (FTSEMIB.MI)...
+2026-04-28 22:45:46 | INFO | src.data_fetching.historical_fetcher | ✓ FTSE MIB: 1013 data points
+2026-04-28 22:45:46 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for US 10Y Treasury (^TNX)...
+2026-04-28 22:45:47 | INFO | src.data_fetching.historical_fetcher | ✓ US 10Y Treasury: 1001 data points
+2026-04-28 22:45:47 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for US 2Y Treasury (^IRX)...
+2026-04-28 22:45:47 | INFO | src.data_fetching.historical_fetcher | ✓ US 2Y Treasury: 1001 data points
+2026-04-28 22:45:47 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for US 30Y Treasury (^TYX)...
+2026-04-28 22:45:47 | INFO | src.data_fetching.historical_fetcher | ✓ US 30Y Treasury: 1001 data points
+2026-04-28 22:45:47 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR Corporate Bonds (LQD)...
+2026-04-28 22:45:48 | INFO | src.data_fetching.historical_fetcher | ✓ EUR Corporate Bonds: 1001 data points
+2026-04-28 22:45:48 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR High Yield Bonds (HYG)...
+2026-04-28 22:45:48 | INFO | src.data_fetching.historical_fetcher | ✓ EUR High Yield Bonds: 1001 data points
+2026-04-28 22:45:48 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR Emerging Markets (VXUS)...
+2026-04-28 22:45:48 | INFO | src.data_fetching.historical_fetcher | ✓ EUR Emerging Markets: 1001 data points
+2026-04-28 22:45:48 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for VIX (^VIX)...
+2026-04-28 22:45:49 | INFO | src.data_fetching.historical_fetcher | ✓ VIX: 1001 data points
+2026-04-28 22:45:49 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for HY OAS (HYG)...
+2026-04-28 22:45:49 | INFO | src.data_fetching.historical_fetcher | ✓ HY OAS: 1001 data points
+2026-04-28 22:45:49 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Investment Grade (LQD)...
+2026-04-28 22:45:49 | INFO | src.data_fetching.historical_fetcher | ✓ Investment Grade: 1001 data points
+2026-04-28 22:45:49 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR/USD (EURUSD=X)...
+2026-04-28 22:45:49 | INFO | src.data_fetching.historical_fetcher | ✓ EUR/USD: 1038 data points
+2026-04-28 22:45:49 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR/GBP (EURGBP=X)...
+2026-04-28 22:45:50 | INFO | src.data_fetching.historical_fetcher | ✓ EUR/GBP: 1038 data points
+2026-04-28 22:45:50 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for USD/JPY (USDJPY=X)...
+2026-04-28 22:45:50 | INFO | src.data_fetching.historical_fetcher | ✓ USD/JPY: 1038 data points
+2026-04-28 22:45:50 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for GBP/USD (GBPUSD=X)...
+2026-04-28 22:45:50 | INFO | src.data_fetching.historical_fetcher | ✓ GBP/USD: 1038 data points
+2026-04-28 22:45:50 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Brent Crude (BZ=F)...
+2026-04-28 22:45:51 | INFO | src.data_fetching.historical_fetcher | ✓ Brent Crude: 1004 data points
+2026-04-28 22:45:51 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Gold (GC=F)...
+2026-04-28 22:45:51 | INFO | src.data_fetching.historical_fetcher | ✓ Gold: 1003 data points
+2026-04-28 22:45:51 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Natural Gas (NG=F)...
+2026-04-28 22:45:51 | INFO | src.data_fetching.historical_fetcher | ✓ Natural Gas: 1004 data points
+2026-04-28 22:45:51 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Silver (SI=F)...
+2026-04-28 22:45:51 | INFO | src.data_fetching.historical_fetcher | ✓ Silver: 1003 data points
+2026-04-28 22:45:51 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Bitcoin (BTC-USD)...
+2026-04-28 22:45:52 | INFO | src.data_fetching.historical_fetcher | ✓ Bitcoin: 1460 data points
+2026-04-28 22:45:52 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Ethereum (ETH-USD)...
+2026-04-28 22:45:52 | INFO | src.data_fetching.historical_fetcher | ✓ Ethereum: 1460 data points
+2026-04-28 22:45:52 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Binance Coin (BNB-USD)...
+2026-04-28 22:45:52 | INFO | src.data_fetching.historical_fetcher | ✓ Binance Coin: 1460 data points
+2026-04-28 22:45:52 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Solana (SOL-USD)...
+2026-04-28 22:45:53 | INFO | src.data_fetching.historical_fetcher | ✓ Solana: 1460 data points
+2026-04-28 22:45:53 | INFO | src.data_fetching.historical_fetcher | 
+✓ Historical data saved to data\historical_data.csv
+2026-04-28 22:45:53 | INFO | src.data_fetching.historical_fetcher |   Rows: 1461 trading days
+2026-04-28 22:45:53 | INFO | src.data_fetching.historical_fetcher |   Columns: 24 metrics
+2026-04-28 22:45:53 | INFO | src.data_fetching.historical_fetcher | 
+============================================================
+2026-04-28 22:45:53 | INFO | src.data_fetching.historical_fetcher | Historical data fetch completed!
+2026-04-28 22:45:53 | INFO | src.data_fetching.historical_fetcher | ============================================================
+2026-04-28 22:45:53 | INFO | __main__ | ✓ Successfully loaded 1461 trading days of data
+2026-04-28 22:45:53 | INFO | __main__ |   Date range: 2022-04-29 to 2026-04-28
+2026-04-28 22:45:53 | INFO | __main__ | ✓ Historical data fetch completed successfully
+2026-04-28 22:46:01 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:46:01 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:46:01 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:46:05 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:46:05 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:46:05 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:46:35 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:46:35 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:46:35 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:46:51 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:46:51 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:46:51 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:47:20 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:47:20 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:47:20 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-636' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-637' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-638' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-639' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-640' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-641' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-642' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-643' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-644' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-645' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-648' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-649' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-650' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-651' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-652' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-653' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-654' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-655' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-656' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-657' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-660' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-661' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-662' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-663' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-664' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-665' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-668' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-669' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-670' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-671' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-672' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-673' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-674' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-675' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-676' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-677' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-680' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-683' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-686' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-689' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-692' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-695' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-698' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-701' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-704' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-707' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-710' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-713' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-716' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-719' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-722' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-725' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-726' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-727' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-730' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-731' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-732' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-733' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-734' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-737' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-740' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-743' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-746' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-747' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-750' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:22 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-753' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\PycharmProjects\portfolio_risk_dashboard\.venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-04-28 22:47:33 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:47:33 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:47:33 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:47:39 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:47:39 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:47:39 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:56:10 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:56:10 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:56:10 | INFO | src.data_fetching.risk_aggregator | Loaded 1461 rows of historical data (2022-04-29 to 2026-04-28)
+2026-04-28 22:57:04 | INFO | __main__ | Fetching 3 years of historical data...
+2026-04-28 22:57:04 | INFO | __main__ | Fetching 3 years of historical data...
+2026-04-28 22:57:04 | INFO | src.data_fetching.historical_fetcher | ============================================================
+2026-04-28 22:57:04 | INFO | src.data_fetching.historical_fetcher | Fetching historical data (3 years)...
+2026-04-28 22:57:04 | INFO | src.data_fetching.historical_fetcher | Period: 2023-04-29 to 2026-04-28
+2026-04-28 22:57:04 | INFO | src.data_fetching.historical_fetcher | ============================================================
+2026-04-28 22:57:04 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for S&P 500 (^GSPC)...
+2026-04-28 22:57:05 | INFO | src.data_fetching.historical_fetcher | ✓ S&P 500: 750 data points
+2026-04-28 22:57:05 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EuroStoxx 50 (^STOXX50E)...
+2026-04-28 22:57:06 | INFO | src.data_fetching.historical_fetcher | ✓ EuroStoxx 50: 747 data points
+2026-04-28 22:57:06 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for FTSE MIB (FTSEMIB.MI)...
+2026-04-28 22:57:06 | INFO | src.data_fetching.historical_fetcher | ✓ FTSE MIB: 756 data points
+2026-04-28 22:57:06 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for US 10Y Treasury (^TNX)...
+2026-04-28 22:57:07 | INFO | src.data_fetching.historical_fetcher | ✓ US 10Y Treasury: 750 data points
+2026-04-28 22:57:07 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for US 2Y Treasury (^IRX)...
+2026-04-28 22:57:07 | INFO | src.data_fetching.historical_fetcher | ✓ US 2Y Treasury: 750 data points
+2026-04-28 22:57:07 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for US 30Y Treasury (^TYX)...
+2026-04-28 22:57:07 | INFO | src.data_fetching.historical_fetcher | ✓ US 30Y Treasury: 750 data points
+2026-04-28 22:57:07 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR Corporate Bonds (LQD)...
+2026-04-28 22:57:07 | INFO | src.data_fetching.historical_fetcher | ✓ EUR Corporate Bonds: 750 data points
+2026-04-28 22:57:07 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR High Yield Bonds (HYG)...
+2026-04-28 22:57:08 | INFO | src.data_fetching.historical_fetcher | ✓ EUR High Yield Bonds: 750 data points
+2026-04-28 22:57:08 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR Emerging Markets (VXUS)...
+2026-04-28 22:57:08 | INFO | src.data_fetching.historical_fetcher | ✓ EUR Emerging Markets: 750 data points
+2026-04-28 22:57:08 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for VIX (^VIX)...
+2026-04-28 22:57:08 | INFO | src.data_fetching.historical_fetcher | ✓ VIX: 750 data points
+2026-04-28 22:57:08 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for HY OAS (HYG)...
+2026-04-28 22:57:08 | INFO | src.data_fetching.historical_fetcher | ✓ HY OAS: 750 data points
+2026-04-28 22:57:08 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Investment Grade (LQD)...
+2026-04-28 22:57:08 | INFO | src.data_fetching.historical_fetcher | ✓ Investment Grade: 750 data points
+2026-04-28 22:57:08 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR/USD (EURUSD=X)...
+2026-04-28 22:57:08 | INFO | src.data_fetching.historical_fetcher | ✓ EUR/USD: 777 data points
+2026-04-28 22:57:08 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR/GBP (EURGBP=X)...
+2026-04-28 22:57:09 | INFO | src.data_fetching.historical_fetcher | ✓ EUR/GBP: 777 data points
+2026-04-28 22:57:09 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for USD/JPY (USDJPY=X)...
+2026-04-28 22:57:09 | INFO | src.data_fetching.historical_fetcher | ✓ USD/JPY: 777 data points
+2026-04-28 22:57:09 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for GBP/USD (GBPUSD=X)...
+2026-04-28 22:57:09 | INFO | src.data_fetching.historical_fetcher | ✓ GBP/USD: 777 data points
+2026-04-28 22:57:09 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Brent Crude (BZ=F)...
+2026-04-28 22:57:09 | INFO | src.data_fetching.historical_fetcher | ✓ Brent Crude: 753 data points
+2026-04-28 22:57:09 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Gold (GC=F)...
+2026-04-28 22:57:10 | INFO | src.data_fetching.historical_fetcher | ✓ Gold: 752 data points
+2026-04-28 22:57:10 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Natural Gas (NG=F)...
+2026-04-28 22:57:10 | INFO | src.data_fetching.historical_fetcher | ✓ Natural Gas: 753 data points
+2026-04-28 22:57:10 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Silver (SI=F)...
+2026-04-28 22:57:10 | INFO | src.data_fetching.historical_fetcher | ✓ Silver: 752 data points
+2026-04-28 22:57:10 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Bitcoin (BTC-USD)...
+2026-04-28 22:57:10 | INFO | src.data_fetching.historical_fetcher | ✓ Bitcoin: 1095 data points
+2026-04-28 22:57:10 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Ethereum (ETH-USD)...
+2026-04-28 22:57:11 | INFO | src.data_fetching.historical_fetcher | ✓ Ethereum: 1095 data points
+2026-04-28 22:57:11 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Binance Coin (BNB-USD)...
+2026-04-28 22:57:11 | INFO | src.data_fetching.historical_fetcher | ✓ Binance Coin: 1095 data points
+2026-04-28 22:57:11 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Solana (SOL-USD)...
+2026-04-28 22:57:11 | INFO | src.data_fetching.historical_fetcher | ✓ Solana: 1095 data points
+2026-04-28 22:57:11 | INFO | src.data_fetching.historical_fetcher | 
+✓ Historical data saved to data\historical_data.csv
+2026-04-28 22:57:11 | INFO | src.data_fetching.historical_fetcher |   Rows: 1096 trading days
+2026-04-28 22:57:11 | INFO | src.data_fetching.historical_fetcher |   Columns: 24 metrics
+2026-04-28 22:57:11 | INFO | src.data_fetching.historical_fetcher | 
+============================================================
+2026-04-28 22:57:11 | INFO | src.data_fetching.historical_fetcher | Historical data fetch completed!
+2026-04-28 22:57:11 | INFO | src.data_fetching.historical_fetcher | ============================================================
+2026-04-28 22:57:11 | INFO | __main__ | ✓ Successfully loaded 1096 trading days of data
+2026-04-28 22:57:11 | INFO | __main__ |   Date range: 2023-04-29 to 2026-04-28
+2026-04-28 22:57:11 | INFO | __main__ | ✓ Historical data fetch completed successfully
+2026-04-28 22:57:12 | INFO | __main__ | Fetching daily risk factors...
+2026-04-28 22:57:12 | INFO | src.data_fetching.risk_aggregator | ============================================================
+2026-04-28 22:57:12 | INFO | src.data_fetching.risk_aggregator | Starting daily risk factors fetch...
+2026-04-28 22:57:12 | INFO | src.data_fetching.risk_aggregator | ============================================================
+2026-04-28 22:57:12 | INFO | src.data_fetching.risk_aggregator | 
+Fetching equities...
+2026-04-28 22:57:12 | INFO | src.data_fetching.equity_fetcher | Fetching S&P 500 (^GSPC)...
+2026-04-28 22:57:12 | INFO | src.data_fetching.equity_fetcher | S&P 500: 7138.80
+2026-04-28 22:57:12 | INFO | src.data_fetching.equity_fetcher | Fetching EuroStoxx 50 (^STOXX50E)...
+2026-04-28 22:57:13 | INFO | src.data_fetching.equity_fetcher | EuroStoxx 50: 5836.10
+2026-04-28 22:57:13 | INFO | src.data_fetching.equity_fetcher | Fetching FTSE MIB (FTSEMIB.MI)...
+2026-04-28 22:57:13 | INFO | src.data_fetching.equity_fetcher | FTSE MIB: 48040.24
+2026-04-28 22:57:13 | INFO | src.data_fetching.risk_aggregator | ✓ equities fetched successfully
+2026-04-28 22:57:13 | INFO | src.data_fetching.risk_aggregator | 
+Fetching interest_rates...
+2026-04-28 22:57:13 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 10Y Treasury (^TNX)...
+2026-04-28 22:57:13 | INFO | src.data_fetching.interest_rates_fetcher | US 10Y Treasury: 4.3540
+2026-04-28 22:57:13 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 2Y Treasury (^IRX)...
+2026-04-28 22:57:13 | INFO | src.data_fetching.interest_rates_fetcher | US 2Y Treasury: 3.5900
+2026-04-28 22:57:13 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 30Y Treasury (^TYX)...
+2026-04-28 22:57:13 | INFO | src.data_fetching.interest_rates_fetcher | US 30Y Treasury: 4.9440
+2026-04-28 22:57:13 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR Corporate Bonds (LQD)...
+2026-04-28 22:57:13 | INFO | src.data_fetching.interest_rates_fetcher | EUR Corporate Bonds: 109.3400
+2026-04-28 22:57:13 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR High Yield Bonds (HYG)...
+2026-04-28 22:57:13 | INFO | src.data_fetching.interest_rates_fetcher | EUR High Yield Bonds: 80.4000
+2026-04-28 22:57:13 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR Emerging Markets (VXUS)...
+2026-04-28 22:57:13 | INFO | src.data_fetching.interest_rates_fetcher | EUR Emerging Markets: 81.8900
+2026-04-28 22:57:13 | INFO | src.data_fetching.risk_aggregator | ✓ interest_rates fetched successfully
+2026-04-28 22:57:13 | INFO | src.data_fetching.risk_aggregator | 
+Fetching credit...
+2026-04-28 22:57:13 | INFO | src.data_fetching.credit_fetcher | Fetching VIX (^VIX)...
+2026-04-28 22:57:13 | INFO | src.data_fetching.credit_fetcher | VIX: 17.83
+2026-04-28 22:57:13 | INFO | src.data_fetching.credit_fetcher | Fetching HY OAS (HYG)...
+2026-04-28 22:57:13 | INFO | src.data_fetching.credit_fetcher | HY OAS: 80.40
+2026-04-28 22:57:13 | INFO | src.data_fetching.credit_fetcher | Fetching Investment Grade (LQD)...
+2026-04-28 22:57:13 | INFO | src.data_fetching.credit_fetcher | Investment Grade: 109.34
+2026-04-28 22:57:13 | INFO | src.data_fetching.risk_aggregator | ✓ credit fetched successfully
+2026-04-28 22:57:13 | INFO | src.data_fetching.risk_aggregator | 
+Fetching forex...
+2026-04-28 22:57:13 | INFO | src.data_fetching.fx_fetcher | Fetching EUR/USD (EURUSD=X)...
+2026-04-28 22:57:13 | INFO | src.data_fetching.fx_fetcher | EUR/USD: 1.171646
+2026-04-28 22:57:13 | INFO | src.data_fetching.fx_fetcher | Fetching EUR/GBP (EURGBP=X)...
+2026-04-28 22:57:14 | INFO | src.data_fetching.fx_fetcher | EUR/GBP: 0.866250
+2026-04-28 22:57:14 | INFO | src.data_fetching.fx_fetcher | Fetching USD/JPY (USDJPY=X)...
+2026-04-28 22:57:14 | INFO | src.data_fetching.fx_fetcher | USD/JPY: 159.604996
+2026-04-28 22:57:14 | INFO | src.data_fetching.fx_fetcher | Fetching GBP/USD (GBPUSD=X)...
+2026-04-28 22:57:14 | INFO | src.data_fetching.fx_fetcher | GBP/USD: 1.352064
+2026-04-28 22:57:14 | INFO | src.data_fetching.risk_aggregator | ✓ forex fetched successfully
+2026-04-28 22:57:14 | INFO | src.data_fetching.risk_aggregator | 
+Fetching commodities...
+2026-04-28 22:57:14 | INFO | src.data_fetching.commodities_fetcher | Fetching Brent Crude (BZ=F)...
+2026-04-28 22:57:14 | INFO | src.data_fetching.commodities_fetcher | Brent Crude: 104.09
+2026-04-28 22:57:14 | INFO | src.data_fetching.commodities_fetcher | Fetching Gold (GC=F)...
+2026-04-28 22:57:14 | INFO | src.data_fetching.commodities_fetcher | Gold: 4607.40
+2026-04-28 22:57:14 | INFO | src.data_fetching.commodities_fetcher | Fetching Natural Gas (NG=F)...
+2026-04-28 22:57:14 | INFO | src.data_fetching.commodities_fetcher | Natural Gas: 2.68
+2026-04-28 22:57:14 | INFO | src.data_fetching.commodities_fetcher | Fetching Silver (SI=F)...
+2026-04-28 22:57:14 | INFO | src.data_fetching.commodities_fetcher | Silver: 73.54
+2026-04-28 22:57:14 | INFO | src.data_fetching.risk_aggregator | ✓ commodities fetched successfully
+2026-04-28 22:57:14 | INFO | src.data_fetching.risk_aggregator | 
+Fetching crypto...
+2026-04-28 22:57:14 | INFO | src.data_fetching.crypto_fetcher | Fetching Bitcoin (BTC-USD)...
+2026-04-28 22:57:14 | INFO | src.data_fetching.crypto_fetcher | Bitcoin: $76463.12
+2026-04-28 22:57:14 | INFO | src.data_fetching.crypto_fetcher | Fetching Ethereum (ETH-USD)...
+2026-04-28 22:57:14 | INFO | src.data_fetching.crypto_fetcher | Ethereum: $2295.85
+2026-04-28 22:57:14 | INFO | src.data_fetching.crypto_fetcher | Fetching Binance Coin (BNB-USD)...
+2026-04-28 22:57:14 | INFO | src.data_fetching.crypto_fetcher | Binance Coin: $624.28
+2026-04-28 22:57:14 | INFO | src.data_fetching.crypto_fetcher | Fetching Solana (SOL-USD)...
+2026-04-28 22:57:14 | INFO | src.data_fetching.crypto_fetcher | Solana: $83.80
+2026-04-28 22:57:14 | INFO | src.data_fetching.risk_aggregator | ✓ crypto fetched successfully
+2026-04-28 22:57:14 | INFO | src.data_fetching.risk_aggregator | 
+✓ Full snapshot saved to data\risk_snapshot_2026-04-28.json
+2026-04-28 22:57:14 | INFO | src.data_fetching.risk_aggregator | ✓ Flattened snapshot saved to data\risk_snapshot_2026-04-28.csv
+2026-04-28 22:57:14 | INFO | src.data_fetching.equity_fetcher | Fetching S&P 500 (^GSPC)...
+2026-04-28 22:57:15 | INFO | src.data_fetching.equity_fetcher | S&P 500: 7138.80
+2026-04-28 22:57:15 | INFO | src.data_fetching.equity_fetcher | Fetching EuroStoxx 50 (^STOXX50E)...
+2026-04-28 22:57:15 | INFO | src.data_fetching.equity_fetcher | EuroStoxx 50: 5836.10
+2026-04-28 22:57:15 | INFO | src.data_fetching.equity_fetcher | Fetching FTSE MIB (FTSEMIB.MI)...
+2026-04-28 22:57:15 | INFO | src.data_fetching.equity_fetcher | FTSE MIB: 48040.24
+2026-04-28 22:57:15 | INFO | src.data_fetching.equity_fetcher | Equities saved to data/equities_2026-04-28.csv
+2026-04-28 22:57:15 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 10Y Treasury (^TNX)...
+2026-04-28 22:57:15 | INFO | src.data_fetching.interest_rates_fetcher | US 10Y Treasury: 4.3540
+2026-04-28 22:57:15 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 2Y Treasury (^IRX)...
+2026-04-28 22:57:15 | INFO | src.data_fetching.interest_rates_fetcher | US 2Y Treasury: 3.5900
+2026-04-28 22:57:15 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 30Y Treasury (^TYX)...
+2026-04-28 22:57:15 | INFO | src.data_fetching.interest_rates_fetcher | US 30Y Treasury: 4.9440
+2026-04-28 22:57:15 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR Corporate Bonds (LQD)...
+2026-04-28 22:57:15 | INFO | src.data_fetching.interest_rates_fetcher | EUR Corporate Bonds: 109.3400
+2026-04-28 22:57:15 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR High Yield Bonds (HYG)...
+2026-04-28 22:57:15 | INFO | src.data_fetching.interest_rates_fetcher | EUR High Yield Bonds: 80.4000
+2026-04-28 22:57:15 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR Emerging Markets (VXUS)...
+2026-04-28 22:57:15 | INFO | src.data_fetching.interest_rates_fetcher | EUR Emerging Markets: 81.8900
+2026-04-28 22:57:15 | INFO | src.data_fetching.interest_rates_fetcher | Interest rates saved to data/interest_rates_2026-04-28.csv
+2026-04-28 22:57:15 | INFO | src.data_fetching.credit_fetcher | Fetching VIX (^VIX)...
+2026-04-28 22:57:15 | INFO | src.data_fetching.credit_fetcher | VIX: 17.83
+2026-04-28 22:57:15 | INFO | src.data_fetching.credit_fetcher | Fetching HY OAS (HYG)...
+2026-04-28 22:57:15 | INFO | src.data_fetching.credit_fetcher | HY OAS: 80.40
+2026-04-28 22:57:15 | INFO | src.data_fetching.credit_fetcher | Fetching Investment Grade (LQD)...
+2026-04-28 22:57:15 | INFO | src.data_fetching.credit_fetcher | Investment Grade: 109.34
+2026-04-28 22:57:15 | INFO | src.data_fetching.credit_fetcher | Credit indices saved to data/credit_2026-04-28.csv
+2026-04-28 22:57:15 | INFO | src.data_fetching.fx_fetcher | Fetching EUR/USD (EURUSD=X)...
+2026-04-28 22:57:15 | INFO | src.data_fetching.fx_fetcher | EUR/USD: 1.171646
+2026-04-28 22:57:15 | INFO | src.data_fetching.fx_fetcher | Fetching EUR/GBP (EURGBP=X)...
+2026-04-28 22:57:15 | INFO | src.data_fetching.fx_fetcher | EUR/GBP: 0.866250
+2026-04-28 22:57:15 | INFO | src.data_fetching.fx_fetcher | Fetching USD/JPY (USDJPY=X)...
+2026-04-28 22:57:15 | INFO | src.data_fetching.fx_fetcher | USD/JPY: 159.604996
+2026-04-28 22:57:15 | INFO | src.data_fetching.fx_fetcher | Fetching GBP/USD (GBPUSD=X)...
+2026-04-28 22:57:16 | INFO | src.data_fetching.fx_fetcher | GBP/USD: 1.352064
+2026-04-28 22:57:16 | INFO | src.data_fetching.fx_fetcher | FX rates saved to data/forex_2026-04-28.csv
+2026-04-28 22:57:16 | INFO | src.data_fetching.commodities_fetcher | Fetching Brent Crude (BZ=F)...
+2026-04-28 22:57:16 | INFO | src.data_fetching.commodities_fetcher | Brent Crude: 104.09
+2026-04-28 22:57:16 | INFO | src.data_fetching.commodities_fetcher | Fetching Gold (GC=F)...
+2026-04-28 22:57:16 | INFO | src.data_fetching.commodities_fetcher | Gold: 4607.40
+2026-04-28 22:57:16 | INFO | src.data_fetching.commodities_fetcher | Fetching Natural Gas (NG=F)...
+2026-04-28 22:57:16 | INFO | src.data_fetching.commodities_fetcher | Natural Gas: 2.68
+2026-04-28 22:57:16 | INFO | src.data_fetching.commodities_fetcher | Fetching Silver (SI=F)...
+2026-04-28 22:57:16 | INFO | src.data_fetching.commodities_fetcher | Silver: 73.54
+2026-04-28 22:57:16 | INFO | src.data_fetching.commodities_fetcher | Commodities saved to data/commodities_2026-04-28.csv
+2026-04-28 22:57:16 | INFO | src.data_fetching.crypto_fetcher | Fetching Bitcoin (BTC-USD)...
+2026-04-28 22:57:16 | INFO | src.data_fetching.crypto_fetcher | Bitcoin: $76463.12
+2026-04-28 22:57:16 | INFO | src.data_fetching.crypto_fetcher | Fetching Ethereum (ETH-USD)...
+2026-04-28 22:57:16 | INFO | src.data_fetching.crypto_fetcher | Ethereum: $2295.85
+2026-04-28 22:57:16 | INFO | src.data_fetching.crypto_fetcher | Fetching Binance Coin (BNB-USD)...
+2026-04-28 22:57:16 | INFO | src.data_fetching.crypto_fetcher | Binance Coin: $624.28
+2026-04-28 22:57:16 | INFO | src.data_fetching.crypto_fetcher | Fetching Solana (SOL-USD)...
+2026-04-28 22:57:16 | INFO | src.data_fetching.crypto_fetcher | Solana: $83.80
+2026-04-28 22:57:16 | INFO | src.data_fetching.crypto_fetcher | Cryptocurrencies saved to data/cryptocurrencies_2026-04-28.csv
+2026-04-28 22:57:16 | INFO | src.data_fetching.risk_aggregator | 
+============================================================
+2026-04-28 22:57:16 | INFO | src.data_fetching.risk_aggregator | Daily risk factors snapshot completed!
+2026-04-28 22:57:16 | INFO | src.data_fetching.risk_aggregator | ============================================================
+2026-04-28 22:57:16 | INFO | __main__ | ✓ Fetch completed successfully
+2026-04-28 22:57:35 | INFO | src.data_fetching.risk_aggregator | Loaded 1096 rows of historical data (2023-04-29 to 2026-04-28)
+2026-04-28 22:57:35 | INFO | src.data_fetching.risk_aggregator | Loaded 1096 rows of historical data (2023-04-29 to 2026-04-28)
+2026-04-28 22:57:35 | INFO | src.data_fetching.risk_aggregator | Loaded 1096 rows of historical data (2023-04-29 to 2026-04-28)
+2026-04-28 22:59:14 | INFO | __main__ | Fetching 3 years of historical data...
+2026-04-28 22:59:14 | INFO | __main__ | Fetching 3 years of historical data...
+2026-04-28 22:59:14 | INFO | src.data_fetching.historical_fetcher | ============================================================
+2026-04-28 22:59:14 | INFO | src.data_fetching.historical_fetcher | Fetching historical data (3 years)...
+2026-04-28 22:59:14 | INFO | src.data_fetching.historical_fetcher | Period: 2023-04-29 to 2026-04-28
+2026-04-28 22:59:14 | INFO | src.data_fetching.historical_fetcher | ============================================================
+2026-04-28 22:59:14 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for S&P 500 (^GSPC)...
+2026-04-28 22:59:15 | INFO | src.data_fetching.historical_fetcher | ✓ S&P 500: 750 data points
+2026-04-28 22:59:15 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EuroStoxx 50 (^STOXX50E)...
+2026-04-28 22:59:16 | INFO | src.data_fetching.historical_fetcher | ✓ EuroStoxx 50: 747 data points
+2026-04-28 22:59:16 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for FTSE MIB (FTSEMIB.MI)...
+2026-04-28 22:59:16 | INFO | src.data_fetching.historical_fetcher | ✓ FTSE MIB: 756 data points
+2026-04-28 22:59:16 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for US 10Y Treasury (^TNX)...
+2026-04-28 22:59:16 | INFO | src.data_fetching.historical_fetcher | ✓ US 10Y Treasury: 750 data points
+2026-04-28 22:59:16 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for US 2Y Treasury (^IRX)...
+2026-04-28 22:59:16 | INFO | src.data_fetching.historical_fetcher | ✓ US 2Y Treasury: 750 data points
+2026-04-28 22:59:16 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for US 30Y Treasury (^TYX)...
+2026-04-28 22:59:17 | INFO | src.data_fetching.historical_fetcher | ✓ US 30Y Treasury: 750 data points
+2026-04-28 22:59:17 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR Corporate Bonds (LQD)...
+2026-04-28 22:59:17 | INFO | src.data_fetching.historical_fetcher | ✓ EUR Corporate Bonds: 750 data points
+2026-04-28 22:59:17 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR High Yield Bonds (HYG)...
+2026-04-28 22:59:17 | INFO | src.data_fetching.historical_fetcher | ✓ EUR High Yield Bonds: 750 data points
+2026-04-28 22:59:17 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR Emerging Markets (VXUS)...
+2026-04-28 22:59:18 | INFO | src.data_fetching.historical_fetcher | ✓ EUR Emerging Markets: 750 data points
+2026-04-28 22:59:18 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for VIX (^VIX)...
+2026-04-28 22:59:18 | INFO | src.data_fetching.historical_fetcher | ✓ VIX: 750 data points
+2026-04-28 22:59:18 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for HY OAS (HYG)...
+2026-04-28 22:59:18 | INFO | src.data_fetching.historical_fetcher | ✓ HY OAS: 750 data points
+2026-04-28 22:59:18 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Investment Grade (LQD)...
+2026-04-28 22:59:18 | INFO | src.data_fetching.historical_fetcher | ✓ Investment Grade: 750 data points
+2026-04-28 22:59:18 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR/USD (EURUSD=X)...
+2026-04-28 22:59:18 | INFO | src.data_fetching.historical_fetcher | ✓ EUR/USD: 777 data points
+2026-04-28 22:59:18 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for EUR/GBP (EURGBP=X)...
+2026-04-28 22:59:18 | INFO | src.data_fetching.historical_fetcher | ✓ EUR/GBP: 777 data points
+2026-04-28 22:59:18 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for USD/JPY (USDJPY=X)...
+2026-04-28 22:59:19 | INFO | src.data_fetching.historical_fetcher | ✓ USD/JPY: 777 data points
+2026-04-28 22:59:19 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for GBP/USD (GBPUSD=X)...
+2026-04-28 22:59:19 | INFO | src.data_fetching.historical_fetcher | ✓ GBP/USD: 777 data points
+2026-04-28 22:59:19 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Brent Crude (BZ=F)...
+2026-04-28 22:59:19 | INFO | src.data_fetching.historical_fetcher | ✓ Brent Crude: 753 data points
+2026-04-28 22:59:19 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Gold (GC=F)...
+2026-04-28 22:59:19 | INFO | src.data_fetching.historical_fetcher | ✓ Gold: 752 data points
+2026-04-28 22:59:19 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Natural Gas (NG=F)...
+2026-04-28 22:59:20 | INFO | src.data_fetching.historical_fetcher | ✓ Natural Gas: 753 data points
+2026-04-28 22:59:20 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Silver (SI=F)...
+2026-04-28 22:59:20 | INFO | src.data_fetching.historical_fetcher | ✓ Silver: 752 data points
+2026-04-28 22:59:20 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Bitcoin (BTC-USD)...
+2026-04-28 22:59:20 | INFO | src.data_fetching.historical_fetcher | ✓ Bitcoin: 1095 data points
+2026-04-28 22:59:20 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Ethereum (ETH-USD)...
+2026-04-28 22:59:20 | INFO | src.data_fetching.historical_fetcher | ✓ Ethereum: 1095 data points
+2026-04-28 22:59:20 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Binance Coin (BNB-USD)...
+2026-04-28 22:59:21 | INFO | src.data_fetching.historical_fetcher | ✓ Binance Coin: 1095 data points
+2026-04-28 22:59:21 | INFO | src.data_fetching.historical_fetcher | Fetching historical data for Solana (SOL-USD)...
+2026-04-28 22:59:21 | INFO | src.data_fetching.historical_fetcher | ✓ Solana: 1095 data points
+2026-04-28 22:59:21 | INFO | src.data_fetching.historical_fetcher | 
+✓ Historical data saved to data\historical_data.csv
+2026-04-28 22:59:21 | INFO | src.data_fetching.historical_fetcher |   Rows: 1096 trading days
+2026-04-28 22:59:21 | INFO | src.data_fetching.historical_fetcher |   Columns: 24 metrics
+2026-04-28 22:59:21 | INFO | src.data_fetching.historical_fetcher | 
+============================================================
+2026-04-28 22:59:21 | INFO | src.data_fetching.historical_fetcher | Historical data fetch completed!
+2026-04-28 22:59:21 | INFO | src.data_fetching.historical_fetcher | ============================================================
+2026-04-28 22:59:21 | INFO | __main__ | ✓ Successfully loaded 1096 trading days of data
+2026-04-28 22:59:21 | INFO | __main__ |   Date range: 2023-04-29 to 2026-04-28
+2026-04-28 22:59:21 | INFO | __main__ | ✓ Historical data fetch completed successfully
+2026-04-28 22:59:22 | INFO | __main__ | Fetching daily risk factors...
+2026-04-28 22:59:22 | INFO | src.data_fetching.risk_aggregator | ============================================================
+2026-04-28 22:59:22 | INFO | src.data_fetching.risk_aggregator | Starting daily risk factors fetch...
+2026-04-28 22:59:22 | INFO | src.data_fetching.risk_aggregator | ============================================================
+2026-04-28 22:59:22 | INFO | src.data_fetching.risk_aggregator | 
+Fetching equities...
+2026-04-28 22:59:22 | INFO | src.data_fetching.equity_fetcher | Fetching S&P 500 (^GSPC)...
+2026-04-28 22:59:22 | INFO | src.data_fetching.equity_fetcher | S&P 500: 7138.80
+2026-04-28 22:59:22 | INFO | src.data_fetching.equity_fetcher | Fetching EuroStoxx 50 (^STOXX50E)...
+2026-04-28 22:59:22 | INFO | src.data_fetching.equity_fetcher | EuroStoxx 50: 5836.10
+2026-04-28 22:59:22 | INFO | src.data_fetching.equity_fetcher | Fetching FTSE MIB (FTSEMIB.MI)...
+2026-04-28 22:59:22 | INFO | src.data_fetching.equity_fetcher | FTSE MIB: 48040.24
+2026-04-28 22:59:22 | INFO | src.data_fetching.risk_aggregator | ✓ equities fetched successfully
+2026-04-28 22:59:22 | INFO | src.data_fetching.risk_aggregator | 
+Fetching interest_rates...
+2026-04-28 22:59:22 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 10Y Treasury (^TNX)...
+2026-04-28 22:59:22 | INFO | src.data_fetching.interest_rates_fetcher | US 10Y Treasury: 4.3540
+2026-04-28 22:59:22 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 2Y Treasury (^IRX)...
+2026-04-28 22:59:22 | INFO | src.data_fetching.interest_rates_fetcher | US 2Y Treasury: 3.5900
+2026-04-28 22:59:22 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 30Y Treasury (^TYX)...
+2026-04-28 22:59:23 | INFO | src.data_fetching.interest_rates_fetcher | US 30Y Treasury: 4.9440
+2026-04-28 22:59:23 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR Corporate Bonds (LQD)...
+2026-04-28 22:59:23 | INFO | src.data_fetching.interest_rates_fetcher | EUR Corporate Bonds: 109.3400
+2026-04-28 22:59:23 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR High Yield Bonds (HYG)...
+2026-04-28 22:59:23 | INFO | src.data_fetching.interest_rates_fetcher | EUR High Yield Bonds: 80.4000
+2026-04-28 22:59:23 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR Emerging Markets (VXUS)...
+2026-04-28 22:59:23 | INFO | src.data_fetching.interest_rates_fetcher | EUR Emerging Markets: 81.8900
+2026-04-28 22:59:23 | INFO | src.data_fetching.risk_aggregator | ✓ interest_rates fetched successfully
+2026-04-28 22:59:23 | INFO | src.data_fetching.risk_aggregator | 
+Fetching credit...
+2026-04-28 22:59:23 | INFO | src.data_fetching.credit_fetcher | Fetching VIX (^VIX)...
+2026-04-28 22:59:23 | INFO | src.data_fetching.credit_fetcher | VIX: 17.83
+2026-04-28 22:59:23 | INFO | src.data_fetching.credit_fetcher | Fetching HY OAS (HYG)...
+2026-04-28 22:59:23 | INFO | src.data_fetching.credit_fetcher | HY OAS: 80.40
+2026-04-28 22:59:23 | INFO | src.data_fetching.credit_fetcher | Fetching Investment Grade (LQD)...
+2026-04-28 22:59:23 | INFO | src.data_fetching.credit_fetcher | Investment Grade: 109.34
+2026-04-28 22:59:23 | INFO | src.data_fetching.risk_aggregator | ✓ credit fetched successfully
+2026-04-28 22:59:23 | INFO | src.data_fetching.risk_aggregator | 
+Fetching forex...
+2026-04-28 22:59:23 | INFO | src.data_fetching.fx_fetcher | Fetching EUR/USD (EURUSD=X)...
+2026-04-28 22:59:23 | INFO | src.data_fetching.fx_fetcher | EUR/USD: 1.171783
+2026-04-28 22:59:23 | INFO | src.data_fetching.fx_fetcher | Fetching EUR/GBP (EURGBP=X)...
+2026-04-28 22:59:23 | INFO | src.data_fetching.fx_fetcher | EUR/GBP: 0.866300
+2026-04-28 22:59:23 | INFO | src.data_fetching.fx_fetcher | Fetching USD/JPY (USDJPY=X)...
+2026-04-28 22:59:23 | INFO | src.data_fetching.fx_fetcher | USD/JPY: 159.610001
+2026-04-28 22:59:23 | INFO | src.data_fetching.fx_fetcher | Fetching GBP/USD (GBPUSD=X)...
+2026-04-28 22:59:23 | INFO | src.data_fetching.fx_fetcher | GBP/USD: 1.351753
+2026-04-28 22:59:23 | INFO | src.data_fetching.risk_aggregator | ✓ forex fetched successfully
+2026-04-28 22:59:23 | INFO | src.data_fetching.risk_aggregator | 
+Fetching commodities...
+2026-04-28 22:59:23 | INFO | src.data_fetching.commodities_fetcher | Fetching Brent Crude (BZ=F)...
+2026-04-28 22:59:24 | INFO | src.data_fetching.commodities_fetcher | Brent Crude: 104.18
+2026-04-28 22:59:24 | INFO | src.data_fetching.commodities_fetcher | Fetching Gold (GC=F)...
+2026-04-28 22:59:24 | INFO | src.data_fetching.commodities_fetcher | Gold: 4607.90
+2026-04-28 22:59:24 | INFO | src.data_fetching.commodities_fetcher | Fetching Natural Gas (NG=F)...
+2026-04-28 22:59:24 | INFO | src.data_fetching.commodities_fetcher | Natural Gas: 2.68
+2026-04-28 22:59:24 | INFO | src.data_fetching.commodities_fetcher | Fetching Silver (SI=F)...
+2026-04-28 22:59:24 | INFO | src.data_fetching.commodities_fetcher | Silver: 73.54
+2026-04-28 22:59:24 | INFO | src.data_fetching.risk_aggregator | ✓ commodities fetched successfully
+2026-04-28 22:59:24 | INFO | src.data_fetching.risk_aggregator | 
+Fetching crypto...
+2026-04-28 22:59:24 | INFO | src.data_fetching.crypto_fetcher | Fetching Bitcoin (BTC-USD)...
+2026-04-28 22:59:24 | INFO | src.data_fetching.crypto_fetcher | Bitcoin: $76476.89
+2026-04-28 22:59:24 | INFO | src.data_fetching.crypto_fetcher | Fetching Ethereum (ETH-USD)...
+2026-04-28 22:59:24 | INFO | src.data_fetching.crypto_fetcher | Ethereum: $2295.83
+2026-04-28 22:59:24 | INFO | src.data_fetching.crypto_fetcher | Fetching Binance Coin (BNB-USD)...
+2026-04-28 22:59:24 | INFO | src.data_fetching.crypto_fetcher | Binance Coin: $624.28
+2026-04-28 22:59:24 | INFO | src.data_fetching.crypto_fetcher | Fetching Solana (SOL-USD)...
+2026-04-28 22:59:24 | INFO | src.data_fetching.crypto_fetcher | Solana: $83.78
+2026-04-28 22:59:24 | INFO | src.data_fetching.risk_aggregator | ✓ crypto fetched successfully
+2026-04-28 22:59:24 | INFO | src.data_fetching.risk_aggregator | 
+✓ Full snapshot saved to data\risk_snapshot_2026-04-28.json
+2026-04-28 22:59:24 | INFO | src.data_fetching.risk_aggregator | ✓ Flattened snapshot saved to data\risk_snapshot_2026-04-28.csv
+2026-04-28 22:59:24 | INFO | src.data_fetching.equity_fetcher | Fetching S&P 500 (^GSPC)...
+2026-04-28 22:59:24 | INFO | src.data_fetching.equity_fetcher | S&P 500: 7138.80
+2026-04-28 22:59:24 | INFO | src.data_fetching.equity_fetcher | Fetching EuroStoxx 50 (^STOXX50E)...
+2026-04-28 22:59:24 | INFO | src.data_fetching.equity_fetcher | EuroStoxx 50: 5836.10
+2026-04-28 22:59:24 | INFO | src.data_fetching.equity_fetcher | Fetching FTSE MIB (FTSEMIB.MI)...
+2026-04-28 22:59:24 | INFO | src.data_fetching.equity_fetcher | FTSE MIB: 48040.24
+2026-04-28 22:59:24 | INFO | src.data_fetching.equity_fetcher | Equities saved to data/equities_2026-04-28.csv
+2026-04-28 22:59:24 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 10Y Treasury (^TNX)...
+2026-04-28 22:59:24 | INFO | src.data_fetching.interest_rates_fetcher | US 10Y Treasury: 4.3540
+2026-04-28 22:59:24 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 2Y Treasury (^IRX)...
+2026-04-28 22:59:24 | INFO | src.data_fetching.interest_rates_fetcher | US 2Y Treasury: 3.5900
+2026-04-28 22:59:24 | INFO | src.data_fetching.interest_rates_fetcher | Fetching US 30Y Treasury (^TYX)...
+2026-04-28 22:59:24 | INFO | src.data_fetching.interest_rates_fetcher | US 30Y Treasury: 4.9440
+2026-04-28 22:59:24 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR Corporate Bonds (LQD)...
+2026-04-28 22:59:25 | INFO | src.data_fetching.interest_rates_fetcher | EUR Corporate Bonds: 109.3400
+2026-04-28 22:59:25 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR High Yield Bonds (HYG)...
+2026-04-28 22:59:25 | INFO | src.data_fetching.interest_rates_fetcher | EUR High Yield Bonds: 80.4000
+2026-04-28 22:59:25 | INFO | src.data_fetching.interest_rates_fetcher | Fetching EUR Emerging Markets (VXUS)...
+2026-04-28 22:59:25 | INFO | src.data_fetching.interest_rates_fetcher | EUR Emerging Markets: 81.8900
+2026-04-28 22:59:25 | INFO | src.data_fetching.interest_rates_fetcher | Interest rates saved to data/interest_rates_2026-04-28.csv
+2026-04-28 22:59:25 | INFO | src.data_fetching.credit_fetcher | Fetching VIX (^VIX)...
+2026-04-28 22:59:25 | INFO | src.data_fetching.credit_fetcher | VIX: 17.83
+2026-04-28 22:59:25 | INFO | src.data_fetching.credit_fetcher | Fetching HY OAS (HYG)...
+2026-04-28 22:59:25 | INFO | src.data_fetching.credit_fetcher | HY OAS: 80.40
+2026-04-28 22:59:25 | INFO | src.data_fetching.credit_fetcher | Fetching Investment Grade (LQD)...
+2026-04-28 22:59:25 | INFO | src.data_fetching.credit_fetcher | Investment Grade: 109.34
+2026-04-28 22:59:25 | INFO | src.data_fetching.credit_fetcher | Credit indices saved to data/credit_2026-04-28.csv
+2026-04-28 22:59:25 | INFO | src.data_fetching.fx_fetcher | Fetching EUR/USD (EURUSD=X)...
+2026-04-28 22:59:25 | INFO | src.data_fetching.fx_fetcher | EUR/USD: 1.171783
+2026-04-28 22:59:25 | INFO | src.data_fetching.fx_fetcher | Fetching EUR/GBP (EURGBP=X)...
+2026-04-28 22:59:25 | INFO | src.data_fetching.fx_fetcher | EUR/GBP: 0.866300
+2026-04-28 22:59:25 | INFO | src.data_fetching.fx_fetcher | Fetching USD/JPY (USDJPY=X)...
+2026-04-28 22:59:25 | INFO | src.data_fetching.fx_fetcher | USD/JPY: 159.610001
+2026-04-28 22:59:25 | INFO | src.data_fetching.fx_fetcher | Fetching GBP/USD (GBPUSD=X)...
+2026-04-28 22:59:25 | INFO | src.data_fetching.fx_fetcher | GBP/USD: 1.351753
+2026-04-28 22:59:25 | INFO | src.data_fetching.fx_fetcher | FX rates saved to data/forex_2026-04-28.csv
+2026-04-28 22:59:25 | INFO | src.data_fetching.commodities_fetcher | Fetching Brent Crude (BZ=F)...
+2026-04-28 22:59:25 | INFO | src.data_fetching.commodities_fetcher | Brent Crude: 104.18
+2026-04-28 22:59:25 | INFO | src.data_fetching.commodities_fetcher | Fetching Gold (GC=F)...
+2026-04-28 22:59:25 | INFO | src.data_fetching.commodities_fetcher | Gold: 4607.90
+2026-04-28 22:59:25 | INFO | src.data_fetching.commodities_fetcher | Fetching Natural Gas (NG=F)...
+2026-04-28 22:59:25 | INFO | src.data_fetching.commodities_fetcher | Natural Gas: 2.68
+2026-04-28 22:59:25 | INFO | src.data_fetching.commodities_fetcher | Fetching Silver (SI=F)...
+2026-04-28 22:59:25 | INFO | src.data_fetching.commodities_fetcher | Silver: 73.54
+2026-04-28 22:59:25 | INFO | src.data_fetching.commodities_fetcher | Commodities saved to data/commodities_2026-04-28.csv
+2026-04-28 22:59:25 | INFO | src.data_fetching.crypto_fetcher | Fetching Bitcoin (BTC-USD)...
+2026-04-28 22:59:25 | INFO | src.data_fetching.crypto_fetcher | Bitcoin: $76476.89
+2026-04-28 22:59:25 | INFO | src.data_fetching.crypto_fetcher | Fetching Ethereum (ETH-USD)...
+2026-04-28 22:59:26 | INFO | src.data_fetching.crypto_fetcher | Ethereum: $2295.83
+2026-04-28 22:59:26 | INFO | src.data_fetching.crypto_fetcher | Fetching Binance Coin (BNB-USD)...
+2026-04-28 22:59:26 | INFO | src.data_fetching.crypto_fetcher | Binance Coin: $624.28
+2026-04-28 22:59:26 | INFO | src.data_fetching.crypto_fetcher | Fetching Solana (SOL-USD)...
+2026-04-28 22:59:26 | INFO | src.data_fetching.crypto_fetcher | Solana: $83.78
+2026-04-28 22:59:26 | INFO | src.data_fetching.crypto_fetcher | Cryptocurrencies saved to data/cryptocurrencies_2026-04-28.csv
+2026-04-28 22:59:26 | INFO | src.data_fetching.risk_aggregator | 
+============================================================
+2026-04-28 22:59:26 | INFO | src.data_fetching.risk_aggregator | Daily risk factors snapshot completed!
+2026-04-28 22:59:26 | INFO | src.data_fetching.risk_aggregator | ============================================================
+2026-04-28 22:59:26 | INFO | __main__ | ✓ Fetch completed successfully

@@ -523,7 +523,7 @@ def main():
     with tabs[7]:
         st.subheader("₿ Cryptocurrencies")
 
-        cryptocurrencies = snapshot['data'].get('cryptocurrencies', {})
+        cryptocurrencies = snapshot['data'].get('crypto', {})
         if cryptocurrencies:
             # Display current values
             cols = st.columns(len(cryptocurrencies))
