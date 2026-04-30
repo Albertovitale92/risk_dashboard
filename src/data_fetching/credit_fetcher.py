@@ -23,14 +23,15 @@ ALT_CREDIT_TICKERS = {
 
 
 class CreditFetcher:
-    """Fetch credit market indices (VIX, credit ETFs, spreads)."""
+    """Fetch credit market indices (spreads, bond ETFs)."""
 
     def __init__(self, data_dir="data"):
         self.data_dir = data_dir
         self.indices = {
-            "VIX": "^VIX",                          # Equity volatility
-            "HY OAS": "HYG",                        # High Yield Bond ETF (proxy for spreads)
-            "Investment Grade": "LQD",              # Investment Grade Bond ETF
+            "VIX": "^VIX",                        # Volatility Index
+            "Investment Grade": "LQD",            # iShares Investment Grade Corporate Bond ETF
+            "High Yield": "HYG",                  # iShares High Yield Corporate Bond ETF
+            "EUR Bond Index": "VEUR",             # Vanguard FTSE All-World UCITS ETF (EUR bond market indicator)
         }
 
     def fetch_all(self):

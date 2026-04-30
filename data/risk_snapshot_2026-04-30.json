@@ -1,0 +1,72 @@
+{
+  "date": "2026-04-30",
+  "timestamp": "2026-04-30 19:15:32",
+  "data": {
+    "equities": {
+      "S&P 500": 7177.77001953125,
+      "EuroStoxx 50": 5881.509765625,
+      "FTSE MIB": 48246.12109375,
+      "VIX": 17.420000076293945
+    },
+    "interest_rates": {
+      "US 1M Treasury": 3.68,
+      "US 3M Treasury": 3.68,
+      "US 6M Treasury": 3.72,
+      "US 1Y Treasury": 3.71,
+      "US 2Y Treasury": 3.84,
+      "US 3Y Treasury": 3.86,
+      "US 5Y Treasury": 3.97,
+      "US 7Y Treasury": 4.16,
+      "US 10Y Treasury": 4.36,
+      "US 20Y Treasury": 4.92,
+      "US 30Y Treasury": 4.94,
+      "EURIBOR 3M": 2.1094091,
+      "ESTR ON": 1.932,
+      "ESTR 1W Realised": 1.93284,
+      "ESTR 1M Realised": 1.93314,
+      "ESTR 3M Realised": 1.93592,
+      "ESTR 6M Realised": 1.93991,
+      "ESTR 12M Realised": 1.975,
+      "ECB OIS 1M": 1.94,
+      "ECB OIS 2M": 1.955,
+      "ECB OIS 3M": 1.99,
+      "ECB OIS 6M": 2.073,
+      "ECB OIS 9M": 2.014,
+      "ECB OIS 12M": 2.044,
+      "ECB OIS 2Y": 2.178,
+      "ECB OIS 3Y": 2.232,
+      "ECB OIS 5Y": 2.354,
+      "ECB OIS 10Y": 2.634,
+      "EUR AAA 1Y": 2.5661879776,
+      "EUR AAA 2Y": 2.665172473,
+      "EUR AAA 5Y": 2.7790008337,
+      "EUR AAA 10Y": 3.142710173,
+      "EUR AAA 20Y": 3.5296710149,
+      "EUR AAA 30Y": 3.5209558617
+    },
+    "credit": {
+      "VIX": 17.420000076293945,
+      "Investment Grade": 108.85579681396484,
+      "High Yield": 80.27999877929688,
+      "EUR Bond Index": null
+    },
+    "forex": {
+      "EUR/USD": 1.1727453470230103,
+      "EUR/GBP": 0.8634700179100037,
+      "USD/JPY": 156.61700439453125,
+      "GBP/USD": 1.357810139656067
+    },
+    "commodities": {
+      "Brent Crude": 109.58999633789062,
+      "Gold": 4630.39990234375,
+      "Natural Gas": 2.744999885559082,
+      "Silver": 73.97000122070312
+    },
+    "crypto": {
+      "Bitcoin": 76154.953125,
+      "Ethereum": 2253.5400390625,
+      "Binance Coin": 616.0599975585938,
+      "Solana": 82.95999908447266
+    }
+  }
+}

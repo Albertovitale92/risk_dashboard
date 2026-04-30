@@ -1,0 +1,29 @@
+position_id,risk_factor,risk_factor_type,time_series_source,exposure_measure,exposure_amount_eur,beta_or_sensitivity,mapping_method,mapping_status,notes
+EQ001,EuroStoxx 50,Equity index,data/historical_data.csv,market_value_eur,2670000,1.00,Direct broad-index proxy,Active,
+EQ002,EuroStoxx 50,Equity index,data/historical_data.csv,market_value_eur,3237500,1.10,Direct broad-index proxy,Active,Technology stock beta estimate
+EQ003,EuroStoxx 50,Equity index,data/historical_data.csv,market_value_eur,2184000,1.05,Direct broad-index proxy,Active,
+EQ004,FTSE MIB,Equity index,data/historical_data.csv,market_value_eur,1278000,1.00,Local index proxy,Active,
+EQ005,S&P 500,Equity index,data/historical_data.csv,market_value_eur,3157140,1.10,Local index proxy,Active,
+EQ005,EUR/USD,FX,data/historical_data.csv,market_value_eur,3157140,-1.00,Currency translation,Active,USD asset translated to EUR
+EQ006,EuroStoxx 50,Equity index,data/historical_data.csv,market_value_eur,3170350,0.90,Broad European index proxy,Active,
+EQ006,EUR/GBP,FX,data/historical_data.csv,market_value_eur,3170350,-1.00,Currency translation,Active,GBP asset translated to EUR
+CMD001,Gold,Commodity,data/historical_data.csv,market_value_eur,312034,1.00,Direct commodity proxy,Active,
+CMD001,EUR/USD,FX,data/historical_data.csv,market_value_eur,312034,-1.00,Currency translation,Active,USD contract translated to EUR
+CMD001,US 2Y Treasury,Interest rate,data/historical_data.csv,notional_eur,312034,0.05,Short-dated collateral proxy,Active,
+CMD002,Brent Crude,Commodity,data/historical_data.csv,market_value_eur,14219880,1.00,Direct commodity proxy,Active,
+CMD002,EUR/USD,FX,data/historical_data.csv,market_value_eur,14219880,-1.00,Currency translation,Active,USD contract translated to EUR
+CMD002,US 2Y Treasury,Interest rate,data/historical_data.csv,notional_eur,14219880,0.05,Short-dated collateral proxy,Active,
+CMD003,Natural Gas,Commodity,data/historical_data.csv,market_value_eur,-202812,1.00,Direct commodity proxy,Active,Short position
+CMD003,EUR/USD,FX,data/historical_data.csv,market_value_eur,-202812,-1.00,Currency translation,Active,USD contract translated to EUR
+CMD003,US 2Y Treasury,Interest rate,data/historical_data.csv,notional_eur,202812,0.05,Short-dated collateral proxy,Active,
+OPT001,EuroStoxx 50,Equity index,data/historical_data.csv,delta_adjusted_eur,25578,0.42,Option delta mapping,Active,
+OPT001,VIX,Volatility,data/historical_data.csv,vega_eur,21500,1.00,Temporary implied-vol proxy,Proxy,VIX used until EuroStoxx implied vol history is added
+OPT001,ESTR ON,Interest rate,data/historical_data.csv,notional_eur,60900,0.02,EUR overnight-rate proxy,Active,Use uploaded EUR OIS quotes for forward-looking discount-curve risk when available
+OPT002,S&P 500,Equity index,data/historical_data.csv,delta_adjusted_eur,-24818,-0.36,Option delta mapping,Active,
+OPT002,VIX,Volatility,data/historical_data.csv,vega_eur,38200,1.00,Direct listed-vol proxy,Active,
+OPT002,EUR/USD,FX,data/historical_data.csv,market_value_eur,68940,-1.00,Currency translation,Active,USD option premium translated to EUR
+OPT002,US 10Y Treasury,Interest rate,data/historical_data.csv,notional_eur,68940,0.04,Longer-dated discount-rate proxy,Active,
+OPT003,Brent Crude,Commodity,data/historical_data.csv,delta_adjusted_eur,66793,0.31,Option delta mapping,Active,
+OPT003,VIX,Volatility,data/historical_data.csv,vega_eur,18800,1.00,Temporary implied-vol proxy,Proxy,VIX used until Brent implied vol history is added
+OPT003,EUR/USD,FX,data/historical_data.csv,market_value_eur,215460,-1.00,Currency translation,Active,USD option premium translated to EUR
+OPT003,US 2Y Treasury,Interest rate,data/historical_data.csv,notional_eur,215460,0.03,Short-dated discount-rate proxy,Active,

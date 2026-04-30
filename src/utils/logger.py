@@ -13,7 +13,17 @@ formatter = logging.Formatter(
     datefmt="%Y-%m-%d %H:%M:%S"
 )
 
-file_handler = TimedRotatingFileHandler(
+class SafeTimedRotatingFileHandler(TimedRotatingFileHandler):
+    """Skip rollover if Windows has the log file locked elsewhere."""
+
+    def doRollover(self):
+        try:
+            super().doRollover()
+        except PermissionError:
+            self.rolloverAt = self.computeRollover(int(datetime.now().timestamp()))
+
+
+file_handler = SafeTimedRotatingFileHandler(
     LOG_FILE,
     when="midnight",
     interval=1,

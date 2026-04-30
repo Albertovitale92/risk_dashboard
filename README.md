@@ -10,16 +10,18 @@ A comprehensive Python-based dashboard for tracking daily financial risk factors
 - S&P 500
 - EuroStoxx 50
 - FTSE MIB
+- VIX (Equity Volatility)
 
 #### 📊 **Interest Rates**
-- Bund Yield (10Y)
-- EUR 3M Rate (Euribor)
-- USD 3M Rate
+- USD Treasury curve: 1M, 3M, 6M, 1Y, 2Y, 3Y, 5Y, 7Y, 10Y, 20Y, 30Y
+- EUR AAA spot curve: 1Y, 2Y, 5Y, 10Y, 20Y, 30Y
+- EURIBOR 3M monthly average, sourced from the ECB Data Portal
+- Realised €STR rates: ON, 1W, 1M, 3M, 6M, 12M
+- User-uploaded EUR OIS market quotes for indicative forward-looking risk-free curve construction
 
 #### 💳 **Credit Indices**
 - iTraxx Europe Main
 - iTraxx Crossover
-- VIX (Equity Volatility)
 
 #### 💱 **Foreign Exchange**
 - EUR/USD
@@ -194,7 +196,7 @@ scheduler.start()
 ## Data Sources
 
 - **Equities**: Yahoo Finance (yfinance)
-- **Interest Rates**: Yahoo Finance
+- **Interest Rates**: FRED for USD Treasury constant-maturity yields; ECB Data Portal for EURIBOR 3M
 - **Credit Indices**: Yahoo Finance (VIX proxy)
 - **FX Pairs**: Yahoo Finance
 - **Commodities**: Yahoo Finance (futures)

@@ -1,0 +1,37 @@
+sheet,column,description
+positions,position_id,Stable unique identifier for the position.
+positions,as_of_date,Portfolio valuation date.
+positions,portfolio_manager,Mock manager or sleeve owner.
+positions,book,Portfolio book or sleeve.
+positions,strategy,Investment strategy bucket.
+positions,asset_class,High-level asset class such as Equity Commodity or Option.
+positions,instrument_type,Instrument form such as Cash Equity Futures or Index Call Option.
+positions,instrument_name,Readable instrument name.
+positions,ticker_or_contract,Trading ticker contract code or OTC description.
+positions,isin,ISIN where available; otherwise an internal or venue identifier.
+positions,currency,Instrument valuation currency.
+positions,quantity,Position quantity; negative values indicate shorts.
+positions,price,Latest local price or premium.
+positions,market_value_local,Market value in the instrument currency.
+positions,market_value_eur,Market value translated to EUR.
+positions,maturity,Derivative maturity date where relevant.
+positions,option_type,Call or Put for option positions.
+positions,strike,Option strike where relevant.
+positions,delta,Option delta where relevant.
+positions,gamma,Option gamma where relevant.
+positions,vega,Option vega where relevant.
+positions,primary_risk_factor,Main market risk factor matching a downloaded time-series column when possible.
+positions,fx_risk_factor,FX risk factor used for non-EUR instruments.
+positions,rate_risk_factor,Interest-rate or discount-rate risk factor.
+positions,volatility_risk_factor,Volatility risk factor for option positions.
+positions,notes,Free-form mapping and modelling notes.
+risk_factor_mapping,position_id,Position identifier joined to positions.position_id.
+risk_factor_mapping,risk_factor,Risk factor name.
+risk_factor_mapping,risk_factor_type,Type of risk factor.
+risk_factor_mapping,time_series_source,Local source file containing the time series or snapshot.
+risk_factor_mapping,exposure_measure,Exposure basis such as market_value_eur delta_adjusted_eur vega_eur or notional_eur.
+risk_factor_mapping,exposure_amount_eur,EUR exposure amount for aggregation and reporting.
+risk_factor_mapping,beta_or_sensitivity,Beta sensitivity or scalar used to convert position exposure into factor exposure.
+risk_factor_mapping,mapping_method,How the risk factor was assigned.
+risk_factor_mapping,mapping_status,Active Proxy or Placeholder.
+risk_factor_mapping,notes,Free-form mapping notes.

@@ -7,12 +7,21 @@ from pathlib import Path
 import json
 
 from src.utils.logger import get_logger
+from src.data_fetching.interest_rates_fetcher import (
+    ECB_EURIBOR_3M_SERIES_KEY,
+    ESTR_REALISED_RATE_SERIES,
+    EUR_AAA_YIELD_CURVE_SERIES,
+    USD_TREASURY_CURVE_SERIES,
+    fetch_ecb_mmsr_ois_curve,
+    fetch_ecb_series,
+    fetch_fred_series,
+)
 
 logger = get_logger(__name__)
 
 
 class HistoricalDataFetcher:
-    """Fetches and manages 3-4 years of historical data."""
+    """Fetches and manages historical data."""
 
     def __init__(self, data_dir="data", years=3):
         """
@@ -24,7 +33,7 @@ class HistoricalDataFetcher:
         """
         self.data_dir = Path(data_dir)
         self.data_dir.mkdir(exist_ok=True)
-        self.years = min(years, 100)  # Allow up to 100 years
+        self.years = min(years, 10)  # Cap at 10 years max
         self.start_date = (datetime.now() - timedelta(days=365 * self.years)).strftime("%Y-%m-%d")
         self.end_date = datetime.now().strftime("%Y-%m-%d")
         self.historical_file = self.data_dir / "historical_data.csv"
@@ -39,26 +48,20 @@ class HistoricalDataFetcher:
 
         historical_data = []
 
-        # Define all tickers to fetch
+        # Define Yahoo Finance tickers to fetch. USD Treasury curve history is
+        # sourced from FRED below because Yahoo lacks a reliable full CMT curve.
         tickers = {
             # Equities
             "S&P 500": "^GSPC",
             "EuroStoxx 50": "^STOXX50E",
             "FTSE MIB": "FTSEMIB.MI",
             
-            # Interest Rates (using ETFs as proxies for rates)
-            "US 10Y Treasury": "^TNX",
-            "US 2Y Treasury": "^IRX",
-            "US 30Y Treasury": "^TYX",
-            "EUR Corporate Bonds": "LQD",
-            "EUR High Yield Bonds": "HYG",
-            "EUR Emerging Markets": "VXUS",
-            
-            # Credit
+            # Credit (Volatility index + Corporate bonds + EUR bond index)
             "VIX": "^VIX",
-            "HY OAS": "HYG",
             "Investment Grade": "LQD",
-            
+            "High Yield": "HYG",
+            "EUR Bond Index": "VEUR",
+
             # Forex
             "EUR/USD": "EURUSD=X",
             "EUR/GBP": "EURGBP=X",
@@ -77,6 +80,139 @@ class HistoricalDataFetcher:
             "Binance Coin": "BNB-USD",
             "Solana": "SOL-USD",
         }
+
+        # Fetch USD Treasury constant-maturity yields from FRED.
+        for metric_name, series_id in USD_TREASURY_CURVE_SERIES.items():
+            try:
+                logger.info(f"Fetching historical data for {metric_name} from FRED ({series_id})...")
+                series = fetch_fred_series(
+                    series_id,
+                    start_date=self.start_date,
+                    end_date=self.end_date,
+                )
+
+                if series.empty:
+                    logger.warning(f"No data found for {metric_name}")
+                    continue
+
+                for _, row in series.iterrows():
+                    historical_data.append({
+                        "date": row["date"].strftime("%Y-%m-%d"),
+                        "metric": metric_name,
+                        "value": float(row["value"])
+                    })
+
+                logger.info(f"✓ {metric_name}: {len(series)} data points")
+
+            except Exception as e:
+                logger.error(f"✗ Failed to fetch {metric_name} from FRED: {e}")
+
+        try:
+            logger.info(f"Fetching historical data for EURIBOR 3M from ECB ({ECB_EURIBOR_3M_SERIES_KEY})...")
+            euribor = fetch_ecb_series(
+                ECB_EURIBOR_3M_SERIES_KEY,
+                start_date=self.start_date,
+                end_date=self.end_date,
+            )
+
+            if euribor.empty:
+                logger.warning("No data found for EURIBOR 3M")
+            else:
+                daily_dates = pd.date_range(self.start_date, self.end_date, freq="D")
+                daily_values = (
+                    euribor.set_index("date")["value"]
+                    .reindex(daily_dates, method="ffill")
+                    .dropna()
+                )
+
+                for date, value in daily_values.items():
+                    historical_data.append({
+                        "date": date.strftime("%Y-%m-%d"),
+                        "metric": "EURIBOR 3M",
+                        "value": float(value)
+                    })
+
+                logger.info(f"✓ EURIBOR 3M: {len(daily_values)} daily points from {len(euribor)} monthly observations")
+
+        except Exception as e:
+            logger.error(f"✗ Failed to fetch EURIBOR 3M from ECB: {e}")
+
+        # Fetch realised €STR rates. These are backward-looking realised rates,
+        # not forward OIS curve points.
+        for metric_name, series_key in ESTR_REALISED_RATE_SERIES.items():
+            try:
+                logger.info(f"Fetching historical data for {metric_name} from ECB ({series_key})...")
+                series = fetch_ecb_series(
+                    series_key,
+                    start_date=self.start_date,
+                    end_date=self.end_date,
+                )
+
+                if series.empty:
+                    logger.warning(f"No data found for {metric_name}")
+                    continue
+
+                for _, row in series.iterrows():
+                    historical_data.append({
+                        "date": row["date"].strftime("%Y-%m-%d"),
+                        "metric": metric_name,
+                        "value": float(row["value"])
+                    })
+
+                logger.info(f"✓ {metric_name}: {len(series)} data points")
+
+            except Exception as e:
+                logger.error(f"✗ Failed to fetch {metric_name} from ECB: {e}")
+
+        # Fetch ECB MMSR OIS weighted-average rate buckets. These are
+        # transaction-based OIS statistics, not live dealer par swap quotes.
+        try:
+            logger.info("Fetching historical data for ECB MMSR OIS curve...")
+            ois_curve = fetch_ecb_mmsr_ois_curve(
+                start_date=self.start_date,
+                end_date=self.end_date,
+            )
+
+            if ois_curve.empty:
+                logger.warning("No data found for ECB MMSR OIS curve")
+            else:
+                for _, row in ois_curve.iterrows():
+                    historical_data.append({
+                        "date": row["date"].strftime("%Y-%m-%d"),
+                        "metric": row["metric"],
+                        "value": float(row["value"])
+                    })
+
+                logger.info(f"✓ ECB MMSR OIS curve: {len(ois_curve)} data points")
+
+        except Exception as e:
+            logger.error(f"✗ Failed to fetch ECB MMSR OIS curve: {e}")
+
+        # Fetch EUR AAA government-bond spot curve directly from ECB.
+        for metric_name, series_key in EUR_AAA_YIELD_CURVE_SERIES.items():
+            try:
+                logger.info(f"Fetching historical data for {metric_name} from ECB ({series_key})...")
+                series = fetch_ecb_series(
+                    series_key,
+                    start_date=self.start_date,
+                    end_date=self.end_date,
+                )
+
+                if series.empty:
+                    logger.warning(f"No data found for {metric_name}")
+                    continue
+
+                for _, row in series.iterrows():
+                    historical_data.append({
+                        "date": row["date"].strftime("%Y-%m-%d"),
+                        "metric": metric_name,
+                        "value": float(row["value"])
+                    })
+
+                logger.info(f"✓ {metric_name}: {len(series)} data points")
+
+            except Exception as e:
+                logger.error(f"✗ Failed to fetch {metric_name} from ECB: {e}")
 
         # Fetch data for each ticker
         for metric_name, ticker in tickers.items():

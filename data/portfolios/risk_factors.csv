@@ -1,0 +1,43 @@
+risk_factor,risk_factor_type,time_series_source,available_in_historical_data,available_in_latest_snapshot,base_currency_or_quote,typical_use,notes
+S&P 500,Equity index,data/historical_data.csv,Yes,Yes,USD,US equity market risk,
+EuroStoxx 50,Equity index,data/historical_data.csv,Yes,Yes,EUR,Eurozone equity market risk,
+FTSE MIB,Equity index,data/historical_data.csv,Yes,Yes,EUR,Italian equity market risk,
+VIX,Volatility,data/historical_data.csv,Yes,Yes,USD,US equity implied volatility and temporary option-vol proxy,
+US 1M Treasury,Interest rate,data/historical_data.csv,Yes,Yes,USD,USD Treasury curve short-end risk,
+US 3M Treasury,Interest rate,data/historical_data.csv,Yes,Yes,USD,USD Treasury curve short-end risk,
+US 6M Treasury,Interest rate,data/historical_data.csv,Yes,Yes,USD,USD Treasury curve short-end risk,
+US 1Y Treasury,Interest rate,data/historical_data.csv,Yes,Yes,USD,USD Treasury curve front-end risk,
+US 2Y Treasury,Interest rate,data/historical_data.csv,Yes,Yes,USD,USD Treasury curve front-end risk,
+US 3Y Treasury,Interest rate,data/historical_data.csv,Yes,Yes,USD,USD Treasury curve belly risk,
+US 5Y Treasury,Interest rate,data/historical_data.csv,Yes,Yes,USD,USD Treasury curve belly risk,
+US 7Y Treasury,Interest rate,data/historical_data.csv,Yes,Yes,USD,USD Treasury curve belly risk,
+US 10Y Treasury,Interest rate,data/historical_data.csv,Yes,Yes,USD,USD Treasury curve long-end risk,
+US 20Y Treasury,Interest rate,data/historical_data.csv,Yes,Yes,USD,USD Treasury curve long-end risk,
+US 30Y Treasury,Interest rate,data/historical_data.csv,Yes,Yes,USD,USD Treasury curve ultra-long risk,
+EUR AAA 1Y,Interest rate,data/historical_data.csv,Yes,Yes,EUR,EUR AAA spot yield curve front-end risk,
+EUR AAA 2Y,Interest rate,data/historical_data.csv,Yes,Yes,EUR,EUR AAA spot yield curve front-end risk,
+EUR AAA 5Y,Interest rate,data/historical_data.csv,Yes,Yes,EUR,EUR AAA spot yield curve belly risk,
+EUR AAA 10Y,Interest rate,data/historical_data.csv,Yes,Yes,EUR,EUR AAA spot yield curve long-end risk,
+EUR AAA 20Y,Interest rate,data/historical_data.csv,Yes,Yes,EUR,EUR AAA spot yield curve long-end risk,
+EUR AAA 30Y,Interest rate,data/historical_data.csv,Yes,Yes,EUR,EUR AAA spot yield curve ultra-long risk,
+Investment Grade,Credit spread/data index,data/historical_data.csv,Yes,Yes,USD,Investment-grade credit risk,
+High Yield,Credit spread/data index,data/historical_data.csv,Yes,Yes,USD,High-yield credit risk,
+EUR/USD,FX,data/historical_data.csv,Yes,Yes,EUR/USD,USD exposure translated to EUR,
+EUR/GBP,FX,data/historical_data.csv,Yes,Yes,EUR/GBP,GBP exposure translated to EUR,
+USD/JPY,FX,data/historical_data.csv,Yes,Yes,USD/JPY,JPY exposure translated through USD cross,
+GBP/USD,FX,data/historical_data.csv,Yes,Yes,GBP/USD,GBP/USD cross-check or USD bridge,
+Brent Crude,Commodity,data/historical_data.csv,Yes,Yes,USD,Oil price risk,
+Gold,Commodity,data/historical_data.csv,Yes,Yes,USD,Precious-metals risk,
+Natural Gas,Commodity,data/historical_data.csv,Yes,Yes,USD,Gas price risk,
+Silver,Commodity,data/historical_data.csv,Yes,Yes,USD,Precious-metals risk,
+Bitcoin,Crypto,data/historical_data.csv,Yes,Yes,USD,Crypto market risk,
+Ethereum,Crypto,data/historical_data.csv,Yes,Yes,USD,Crypto market risk,
+Binance Coin,Crypto,data/historical_data.csv,Yes,Yes,USD,Crypto market risk,
+Solana,Crypto,data/historical_data.csv,Yes,Yes,USD,Crypto market risk,
+EURIBOR 3M,Interest rate,data/historical_data.csv,Yes,Yes,EUR,EUR short-rate risk,Monthly ECB series forward-filled to daily dates in historical_data.csv
+ESTR ON,Interest rate,data/historical_data.csv,Yes,Yes,EUR,EUR overnight realised short-rate risk,ECB euro short-term rate
+ESTR 1W Realised,Interest rate,data/historical_data.csv,Yes,Yes,EUR,Backward-looking realised EUR money-market rate,ECB compounded euro short-term rate
+ESTR 1M Realised,Interest rate,data/historical_data.csv,Yes,Yes,EUR,Backward-looking realised EUR money-market rate,ECB compounded euro short-term rate
+ESTR 3M Realised,Interest rate,data/historical_data.csv,Yes,Yes,EUR,Backward-looking realised EUR money-market rate,ECB compounded euro short-term rate
+ESTR 6M Realised,Interest rate,data/historical_data.csv,Yes,Yes,EUR,Backward-looking realised EUR money-market rate,ECB compounded euro short-term rate
+ESTR 12M Realised,Interest rate,data/historical_data.csv,Yes,Yes,EUR,Backward-looking realised EUR money-market rate,ECB compounded euro short-term rate

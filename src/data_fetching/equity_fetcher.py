@@ -12,6 +12,7 @@ EQUITY_TICKERS = {
     "S&P 500": "^GSPC",
     "EuroStoxx 50": "^STOXX50E",
     "FTSE MIB": "FTSEMIB.MI",
+    "VIX": "^VIX",  # Equity volatility index
 }
 
 
