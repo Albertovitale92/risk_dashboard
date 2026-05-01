@@ -6,6 +6,7 @@ This folder holds mock portfolio inputs for a multi-asset portfolio manager and 
 
 - `sample_multi_asset_portfolio.xlsx` is the Excel workbook intended for manual review and editing.
 - `positions.csv` is the flat list of portfolio positions.
+- `sample_bank_balance_sheet_core.csv` is a mock Deutsche Bank-style bank balance sheet for step-by-step FTP design work. It is illustrative only and is not reported Deutsche Bank financial data.
 - `risk_factor_mapping.csv` maps each position to one or more risk factors from `data/historical_data.csv`.
 - `risk_factors.csv` lists the currently available downloaded risk factors and their intended use.
 - `data_dictionary.csv` documents the portfolio fields.
@@ -24,3 +25,13 @@ Risk-factor names should match the column names in `data/historical_data.csv` wh
 - Crypto: `Bitcoin`, `Ethereum`, `Binance Coin`, `Solana`
 
 EUR OIS market quotes can be uploaded in the dashboard using the downloadable manual quote template. Uploaded OIS quotes are intended to represent forward-looking risk-free market expectations; realised €STR series are backward-looking and should not be treated as OIS curve points.
+
+## Bank Balance-Sheet Sample
+
+The bank balance-sheet sample intentionally contains only core balance-sheet and rate fields:
+
+- Assets include corporate loans, mortgages, trading assets, HQLA bonds, central-bank reserves, and USD lending.
+- Liabilities include retail and corporate deposits, covered bonds, senior funding, subordinated debt, and equity.
+- Rate fields include `customer_rate_pct`, `rate_type`, `index_name`, `current_repricing_tenor`, and `original_maturity`.
+
+FTP assumptions such as curve assignment, behavioural maturity, liquidity spread, credit spread, capital allocation, and margin formulas are deliberately left out so they can be designed explicitly in later steps.

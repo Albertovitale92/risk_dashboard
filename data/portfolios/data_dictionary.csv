@@ -35,3 +35,19 @@ risk_factor_mapping,beta_or_sensitivity,Beta sensitivity or scalar used to conve
 risk_factor_mapping,mapping_method,How the risk factor was assigned.
 risk_factor_mapping,mapping_status,Active Proxy or Placeholder.
 risk_factor_mapping,notes,Free-form mapping notes.
+sample_bank_balance_sheet_core,line_id,Stable unique identifier for the balance-sheet line.
+sample_bank_balance_sheet_core,as_of_date,Mock balance-sheet reporting date.
+sample_bank_balance_sheet_core,bank_name,Illustrative bank name; not actual reported Deutsche Bank data.
+sample_bank_balance_sheet_core,business_unit,Bank division or treasury unit that owns the balance-sheet line.
+sample_bank_balance_sheet_core,desk_or_product,Product desk or balance-sheet product family.
+sample_bank_balance_sheet_core,side,Asset Liability or Equity.
+sample_bank_balance_sheet_core,balance_sheet_category,High-level balance-sheet bucket such as Loans Customer Deposits or Wholesale Funding.
+sample_bank_balance_sheet_core,instrument_type,Instrument or product type.
+sample_bank_balance_sheet_core,currency,Original balance currency.
+sample_bank_balance_sheet_core,balance_local_mn,Book balance in millions of original currency.
+sample_bank_balance_sheet_core,balance_eur_mn,Book balance translated to EUR millions.
+sample_bank_balance_sheet_core,customer_rate_pct,Customer or contractual rate in percent where applicable.
+sample_bank_balance_sheet_core,rate_type,Fixed Floating Administered Capital Variable or Non-interest Bearing.
+sample_bank_balance_sheet_core,index_name,Reference index such as EURIBOR 3M ESTR ON SOFR 3M or None.
+sample_bank_balance_sheet_core,current_repricing_tenor,Current rate reset tenor used for interest-rate sensitivity.
+sample_bank_balance_sheet_core,original_maturity,Contractual original maturity or Open.
