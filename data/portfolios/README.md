@@ -23,4 +23,4 @@ Risk-factor names should match the column names in `data/historical_data.csv` wh
 - Commodities: `Brent Crude`, `Gold`, `Natural Gas`, `Silver`
 - Crypto: `Bitcoin`, `Ethereum`, `Binance Coin`, `Solana`
 
-EUR OIS market quotes can be provided through `data/market_inputs/eur_ois_quotes_template.csv` or uploaded in the dashboard. Uploaded OIS quotes are intended to represent forward-looking risk-free market expectations; realised €STR series are backward-looking and should not be treated as OIS curve points.
+EUR OIS market quotes can be uploaded in the dashboard using the downloadable manual quote template. Uploaded OIS quotes are intended to represent forward-looking risk-free market expectations; realised €STR series are backward-looking and should not be treated as OIS curve points.
