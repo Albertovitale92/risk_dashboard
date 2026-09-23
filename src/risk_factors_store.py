@@ -41,7 +41,12 @@ def _load_risk_factors_package():
 
 
 ASSET_CLASS_METRICS = {
-    "equities": {"S&P 500", "EuroStoxx 50", "FTSE MIB"},
+    "equities": {
+        "S&P 500", "EuroStoxx 50", "FTSE MIB", "MSCI World (iShares Core UCITS)",
+        "Apple", "Microsoft", "NVIDIA", "Amazon", "Alphabet",
+        "Meta Platforms", "Berkshire Hathaway", "Broadcom", "Tesla",
+        "Eli Lilly",
+    },
     "interest_rates": {
         "US 1M Treasury", "US 3M Treasury", "US 6M Treasury",
         "US 1Y Treasury", "US 2Y Treasury", "US 3Y Treasury",

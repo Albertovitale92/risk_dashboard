@@ -1,6 +1,6 @@
 @echo off
 REM First-time setup script for Portfolio Risk Dashboard
-REM This fetches 3 years of historical data and today's snapshot
+REM The Risk_Factors project owns data fetching and historical storage.
 
 echo.
 echo ============================================================
@@ -10,21 +10,17 @@ echo.
 
 cd /d C:\Users\alber\PycharmProjects\portfolio_risk_dashboard
 
-echo Step 1: Fetching 10 years of historical data (this may take 10-15 minutes)...
+echo Step 1: Ensure Risk_Factors is installed and configured.
 echo.
-.\.venv\Scripts\python.exe run.py fetch-history --years 10
-
-echo.
-echo Step 2: Fetching today's data...
-echo.
-.\.venv\Scripts\python.exe run.py fetch
+echo Set RISK_FACTORS_PROJECT if it is not at:
+echo C:\Users\alber\PycharmProjects\Risk_Factors
 
 echo.
 echo ============================================================
 echo Setup Complete!
 echo ============================================================
 echo.
-echo Your data is ready. Launching dashboard in 3 seconds...
+echo Launching the dashboard. Use "Refresh Risk_Factors Store" in the sidebar to load data.
 echo.
 
 timeout /t 3
@@ -33,4 +29,3 @@ echo Launching dashboard...
 streamlit run dashboard.py
 
 pause
-

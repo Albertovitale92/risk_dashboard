@@ -2,27 +2,20 @@
 
 import pandas as pd
 import numpy as np
-from pathlib import Path
-from src.utils.logger import get_logger
-
-logger = get_logger(__name__)
 
 
 class ReturnsCalculator:
     """Compute 10-day overlapping returns for time series data."""
 
-    def __init__(self, data_dir="data"):
-        """
-        Initialize returns calculator.
-
-        Args:
-            data_dir: Directory containing historical data
-        """
-        self.data_dir = Path(data_dir)
-
+    def __init__(self):
         # Asset class organization
         self.asset_classes = {
-            "equities": ["S&P 500", "EuroStoxx 50", "FTSE MIB"],
+            "equities": [
+                "S&P 500", "EuroStoxx 50", "FTSE MIB", "MSCI World (iShares Core UCITS)",
+                "Apple", "Microsoft", "NVIDIA", "Amazon", "Alphabet",
+                "Meta Platforms", "Berkshire Hathaway", "Broadcom", "Tesla",
+                "Eli Lilly",
+            ],
             "interest_rates": [
                 "US 1M Treasury", "US 3M Treasury", "US 6M Treasury",
                 "US 1Y Treasury", "US 2Y Treasury", "US 3Y Treasury",
@@ -93,38 +86,6 @@ class ReturnsCalculator:
 
         return organized_returns
 
-    def load_and_calculate_returns(self):
-        """
-        Load historical data and calculate 10-day returns.
-
-        Returns:
-            Tuple of (returns_df, organized_returns_dict)
-        """
-        historical_file = self.data_dir / "historical_data.csv"
-
-        if not historical_file.exists():
-            logger.warning(f"Historical data file not found: {historical_file}")
-            return pd.DataFrame(), {}
-
-        try:
-            # Load historical data
-            df = pd.read_csv(historical_file)
-            logger.info(f"Loaded {len(df)} rows of historical data")
-
-            # Calculate returns
-            returns_df = self.calculate_10d_returns(df)
-
-            # Organize by asset class
-            organized_returns = self.get_returns_by_asset_class(returns_df)
-
-            logger.info(f"Calculated 10-day returns for {len(returns_df)} dates")
-
-            return returns_df, organized_returns
-
-        except Exception as e:
-            logger.error(f"Error calculating returns: {e}")
-            return pd.DataFrame(), {}
-
     def get_summary_statistics(self, returns_df):
         """
         Calculate summary statistics for returns.
@@ -156,52 +117,3 @@ class ReturnsCalculator:
                     }
 
         return statistics
-
-    def get_asset_class_returns(self, asset_class):
-        """
-        Get returns for a specific asset class.
-
-        Args:
-            asset_class: Asset class name (e.g., "equities", "credit")
-
-        Returns:
-            DataFrame with returns for that asset class
-        """
-        _, organized_returns = self.load_and_calculate_returns()
-
-        if asset_class in organized_returns:
-            return organized_returns[asset_class]
-        else:
-            logger.warning(f"Asset class {asset_class} not found")
-            return pd.DataFrame()
-
-
-def load_historical_data(data_dir="data"):
-    """
-    Convenience function to load historical data.
-
-    Args:
-        data_dir: Directory containing historical data
-
-    Returns:
-        DataFrame with historical data
-    """
-    historical_file = Path(data_dir) / "historical_data.csv"
-
-    if historical_file.exists():
-        return pd.read_csv(historical_file)
-    else:
-        logger.warning(f"Historical data not found at {historical_file}")
-        return pd.DataFrame()
-
-
-if __name__ == "__main__":
-    # Example usage
-    calc = ReturnsCalculator()
-    returns_df, organized = calc.load_and_calculate_returns()
-
-    if not returns_df.empty:
-        print(f"Calculated returns for {len(returns_df)} dates")
-        stats = calc.get_summary_statistics(returns_df)
-        print(f"\nStatistics for {len(stats)} metrics")
-

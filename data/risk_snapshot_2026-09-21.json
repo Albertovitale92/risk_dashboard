@@ -1,0 +1,72 @@
+{
+  "date": "2026-09-21",
+  "timestamp": "2026-09-21 13:45:10",
+  "data": {
+    "equities": {
+      "S&P 500": 7650.5,
+      "EuroStoxx 50": 6321.31005859375,
+      "FTSE MIB": 52230.62890625,
+      "VIX": 14.869999885559082
+    },
+    "interest_rates": {
+      "US 1M Treasury": 3.97,
+      "US 3M Treasury": 4.12,
+      "US 6M Treasury": 4.2,
+      "US 1Y Treasury": 4.4,
+      "US 2Y Treasury": 4.67,
+      "US 3Y Treasury": 4.75,
+      "US 5Y Treasury": 4.78,
+      "US 7Y Treasury": 4.86,
+      "US 10Y Treasury": 4.94,
+      "US 20Y Treasury": 5.32,
+      "US 30Y Treasury": 5.29,
+      "EURIBOR 3M": null,
+      "ESTR ON": null,
+      "ESTR 1W Realised": null,
+      "ESTR 1M Realised": null,
+      "ESTR 3M Realised": null,
+      "ESTR 6M Realised": null,
+      "ESTR 12M Realised": null,
+      "ECB OIS 1M": null,
+      "ECB OIS 2M": null,
+      "ECB OIS 3M": null,
+      "ECB OIS 6M": null,
+      "ECB OIS 9M": null,
+      "ECB OIS 12M": null,
+      "ECB OIS 2Y": null,
+      "ECB OIS 3Y": null,
+      "ECB OIS 5Y": null,
+      "ECB OIS 10Y": null,
+      "EUR AAA 1Y": null,
+      "EUR AAA 2Y": null,
+      "EUR AAA 5Y": null,
+      "EUR AAA 10Y": null,
+      "EUR AAA 20Y": null,
+      "EUR AAA 30Y": null
+    },
+    "credit": {
+      "VIX": 14.869999885559082,
+      "Investment Grade": 104.69999694824219,
+      "High Yield": 78.52999877929688,
+      "EUR Bond Index": null
+    },
+    "forex": {
+      "EUR/USD": 1.1491611003875732,
+      "EUR/GBP": 0.8575900197029114,
+      "USD/JPY": 157.18800354003906,
+      "GBP/USD": 1.339566707611084
+    },
+    "commodities": {
+      "Brent Crude": 97.12000274658203,
+      "Gold": 4395.60009765625,
+      "Natural Gas": 2.8440001010894775,
+      "Silver": 66.7750015258789
+    },
+    "crypto": {
+      "Bitcoin": 84786.5,
+      "Ethereum": 2725.2099609375,
+      "Binance Coin": 792.0700073242188,
+      "Solana": 116.9800033569336
+    }
+  }
+}

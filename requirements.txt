@@ -1,12 +1,6 @@
 pandas
-requests
-pydantic
 numpy
 openpyxl
-matplotlib
 streamlit
-yfinance
-lxml
-beautifulsoup4
 plotly
 python-dateutil

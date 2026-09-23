@@ -31,6 +31,18 @@ TREASURY_DEFAULT_SERIES = [
     "ECB OIS 10Y",
 ]
 
+EQUITY_DEFAULT_SERIES = [
+    "S&P 500",
+    "MSCI World (iShares Core UCITS)",
+    "EuroStoxx 50",
+    "FTSE MIB",
+]
+EQUITY_SERIES_ORDER = [
+    "S&P 500", "MSCI World (iShares Core UCITS)", "EuroStoxx 50", "FTSE MIB",
+    "Apple", "Microsoft", "NVIDIA", "Amazon", "Alphabet",
+    "Meta Platforms", "Berkshire Hathaway", "Broadcom", "Tesla", "Eli Lilly",
+]
+
 
 def select_time_series(label, available, default, key, help_text=None):
     """Render a series filter with safe defaults for the current data store."""
@@ -631,13 +643,13 @@ def main():
                 st.session_state.show_eq_returns = True
 
             equity_available = [
-                col for col in ["S&P 500", "EuroStoxx 50", "FTSE MIB"]
+                col for col in EQUITY_SERIES_ORDER
                 if col in historical.columns
             ]
             selected_equities = select_time_series(
                 "Equity series to display",
                 equity_available,
-                equity_available,
+                EQUITY_DEFAULT_SERIES,
                 "equity_series_filter",
             )
 

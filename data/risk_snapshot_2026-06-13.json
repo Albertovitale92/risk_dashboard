@@ -1,0 +1,72 @@
+{
+  "date": "2026-06-13",
+  "timestamp": "2026-06-13 16:50:37",
+  "data": {
+    "equities": {
+      "S&P 500": 7431.4599609375,
+      "EuroStoxx 50": 6187.6298828125,
+      "FTSE MIB": 51497.0,
+      "VIX": 17.68000030517578
+    },
+    "interest_rates": {
+      "US 1M Treasury": null,
+      "US 3M Treasury": null,
+      "US 6M Treasury": null,
+      "US 1Y Treasury": null,
+      "US 2Y Treasury": null,
+      "US 3Y Treasury": null,
+      "US 5Y Treasury": null,
+      "US 7Y Treasury": null,
+      "US 10Y Treasury": null,
+      "US 20Y Treasury": null,
+      "US 30Y Treasury": null,
+      "EURIBOR 3M": 2.2261,
+      "ESTR ON": 1.931,
+      "ESTR 1W Realised": 1.93084,
+      "ESTR 1M Realised": 1.93213,
+      "ESTR 3M Realised": 1.93571,
+      "ESTR 6M Realised": 1.94042,
+      "ESTR 12M Realised": 1.94704,
+      "ECB OIS 1M": 1.943,
+      "ECB OIS 2M": 1.983,
+      "ECB OIS 3M": 2.078,
+      "ECB OIS 6M": 2.244,
+      "ECB OIS 9M": 2.421,
+      "ECB OIS 12M": 2.399,
+      "ECB OIS 2Y": 2.493,
+      "ECB OIS 3Y": 2.535,
+      "ECB OIS 5Y": 2.59,
+      "ECB OIS 10Y": 2.851,
+      "EUR AAA 1Y": 2.5455194241,
+      "EUR AAA 2Y": 2.6089401632,
+      "EUR AAA 5Y": 2.7195887738,
+      "EUR AAA 10Y": 3.0798140633,
+      "EUR AAA 20Y": 3.4938376932,
+      "EUR AAA 30Y": 3.535953392
+    },
+    "credit": {
+      "VIX": 17.68000030517578,
+      "Investment Grade": 109.01000213623047,
+      "High Yield": 79.94000244140625,
+      "EUR Bond Index": null
+    },
+    "forex": {
+      "EUR/USD": 1.157273530960083,
+      "EUR/GBP": 0.8627899885177612,
+      "USD/JPY": 160.18499755859375,
+      "GBP/USD": 1.3407342433929443
+    },
+    "commodities": {
+      "Brent Crude": 87.33000183105469,
+      "Gold": 4215.0,
+      "Natural Gas": 3.119999885559082,
+      "Silver": 67.85900115966797
+    },
+    "crypto": {
+      "Bitcoin": 64154.05859375,
+      "Ethereum": 1678.0,
+      "Binance Coin": 609.9400024414062,
+      "Solana": 68.13999938964844
+    }
+  }
+}
