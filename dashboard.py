@@ -5,13 +5,8 @@ import pandas as pd
 import plotly.graph_objects as go
 from datetime import datetime, timedelta
 import math
-
-from src.data_fetching.risk_aggregator import RiskDashboardAggregator
-from src.data_fetching.interest_rates_fetcher import fetch_ecb_mmsr_ois_curve
+from src.risk_factors_store import RiskFactorsStore
 from src.analysis.returns_calculator import ReturnsCalculator
-from src.utils.logger import get_logger
-
-logger = get_logger(__name__)
 
 
 ECB_OIS_METRIC_TENORS = {
@@ -27,10 +22,64 @@ ECB_OIS_METRIC_TENORS = {
     "ECB OIS 10Y": "10Y",
 }
 
+TREASURY_DEFAULT_SERIES = [
+    "US 3M Treasury",
+    "US 2Y Treasury",
+    "US 10Y Treasury",
+    "ECB OIS 3M",
+    "ECB OIS 2Y",
+    "ECB OIS 10Y",
+]
+
+
+def select_time_series(label, available, default, key, help_text=None):
+    """Render a series filter with safe defaults for the current data store."""
+    available = list(dict.fromkeys(available))
+    defaults = [metric for metric in default if metric in available]
+    return st.multiselect(
+        label,
+        available,
+        default=defaults or available[: min(4, len(available))],
+        key=key,
+        help=help_text,
+    )
+
 
 def format_date_value(value):
     """Return YYYY-MM-DD for Streamlit date widgets and pandas timestamps."""
     return pd.to_datetime(value).strftime("%Y-%m-%d")
+
+
+def filter_date_frame(df, start_date=None, end_date=None):
+    """Filter a dated dataframe without changing its date column type."""
+    if df.empty or "date" not in df.columns or start_date is None or end_date is None:
+        return df
+    dates = pd.to_datetime(df["date"])
+    return df[(dates >= pd.Timestamp(start_date)) & (dates <= pd.Timestamp(end_date))].copy()
+
+
+def apply_business_day_axis(fig, dates):
+    """Remove weekends and missing weekdays from a Plotly date axis."""
+    date_values = pd.to_datetime(pd.Series(dates)).dropna().dt.normalize().drop_duplicates()
+    if date_values.empty:
+        return fig
+
+    expected_business_days = pd.date_range(
+        date_values.min(),
+        date_values.max(),
+        freq="B",
+    )
+    observed_days = set(date_values.tolist())
+    missing_business_days = [
+        day.strftime("%Y-%m-%d")
+        for day in expected_business_days
+        if day not in observed_days
+    ]
+    rangebreaks = [{"bounds": ["sat", "mon"]}]
+    if missing_business_days:
+        rangebreaks.append({"values": missing_business_days})
+    fig.update_xaxes(rangebreaks=rangebreaks)
+    return fig
 
 
 def resolve_curve_row(curve_history, selected_date):
@@ -155,16 +204,18 @@ def build_eur_ois_curve(quotes_df):
 @st.cache_data(ttl=60 * 60)
 def fetch_latest_ecb_ois_quotes():
     """Fetch latest free ECB MMSR OIS weighted-average rate buckets."""
-    ois_curve = fetch_ecb_mmsr_ois_curve(last_n_observations=1)
+    from risk_factors.api import get_rates_curve
+
+    ois_curve = get_rates_curve("ecb_ois", datetime.now().date())
     if ois_curve.empty:
         return pd.DataFrame(columns=["tenor", "rate", "source_date", "source_metric"])
 
-    latest_by_metric = ois_curve.sort_values("date").groupby("metric").tail(1)
+    latest_by_metric = ois_curve.sort_values("date").groupby("tenor").tail(1)
     return pd.DataFrame({
         "tenor": latest_by_metric["tenor"],
         "rate": latest_by_metric["value"],
-        "source_date": latest_by_metric["date"].dt.strftime("%Y-%m-%d"),
-        "source_metric": latest_by_metric["metric"],
+        "source_date": pd.to_datetime(latest_by_metric["date"]).dt.strftime("%Y-%m-%d"),
+        "source_metric": latest_by_metric.get("curve_point", latest_by_metric["tenor"]),
     }).reset_index(drop=True)
 
 
@@ -234,9 +285,9 @@ st.markdown("""
 
 
 @st.cache_resource
-def get_aggregator():
-    """Initialize and cache the aggregator."""
-    return RiskDashboardAggregator(data_dir="data")
+def get_risk_factors_store():
+    """Initialize the shared Risk_Factors data store adapter."""
+    return RiskFactorsStore()
 
 
 def display_metric(label, value, previous_value=None, decimals=2, format_type="number"):
@@ -278,66 +329,102 @@ def main():
     with st.sidebar:
         st.header("⚙️ Controls")
 
-        aggregator = get_aggregator()
+        risk_factors_store = get_risk_factors_store()
 
-        # Refresh button
         if st.button("🔄 Refresh Data", use_container_width=True):
             st.session_state.refresh_key = datetime.now().timestamp()
             st.rerun()
 
-        # Manual fetch
-        if st.button("📥 Fetch Latest Snapshot", use_container_width=True):
-            with st.spinner("Fetching risk factors..."):
-                try:
-                    snapshot = aggregator.save_daily_snapshot()
-                    st.success("✓ Data fetched successfully!")
-                except Exception as e:
-                    st.error(f"✗ Error: {e}")
-
         st.divider()
 
-        # Historical data fetch (show only if not already loaded)
-        if aggregator.load_full_historical_data().empty:
-            st.subheader("📅 Historical Data Setup")
-            hist_years = st.radio("Years of history:", [1, 3, 5, 10], value=3, help="First time only - takes a few minutes (max 10 years)")
-            if st.button("🔄 Fetch Historical Data", use_container_width=True, help="Initialize historical data database"):
-                with st.spinner(f"Fetching {hist_years} years of historical data (this may take 3-5 minutes)..."):
-                    try:
-                        hist_data = aggregator.fetch_and_save_historical_data(years=hist_years)
-                        if not hist_data.empty:
-                            st.success(f"✓ Loaded {len(hist_data)} trading days of historical data!")
-                            st.rerun()
-                        else:
-                            st.error("✗ Failed to load historical data")
-                    except Exception as e:
-                        st.error(f"✗ Error: {e}")
+        historical = risk_factors_store.load_historical_data()
+        st.subheader("📅 Risk_Factors Data Store")
+        metadata = risk_factors_store.load_metadata()
+        default_years = int(metadata.get("years", 3) or 3)
+        hist_years = st.radio(
+            "Historical window (years):",
+            [1, 3, 5, 10],
+            index=[1, 3, 5, 10].index(default_years) if default_years in [1, 3, 5, 10] else 1,
+        )
+        if st.button("🔄 Refresh Risk_Factors Store", use_container_width=True):
+            with st.spinner(f"Refreshing {hist_years} years from Risk_Factors..."):
+                try:
+                    hist_data = risk_factors_store.refresh_historical_data(years=hist_years)
+                    st.success(f"✓ Loaded {len(hist_data)} trading days from Risk_Factors!")
+                    st.rerun()
+                except Exception as e:
+                    st.error(f"✗ Risk_Factors refresh failed: {e}")
+        if historical.empty:
+            st.warning("No shared historical data is available yet.")
         else:
-            latest_hist = aggregator.load_full_historical_data()
-            if not latest_hist.empty:
-                st.success(f"✅ Historical data loaded: {latest_hist['date'].min()} to {latest_hist['date'].max()}")
+            st.success(f"✅ Risk_Factors store loaded: {historical['date'].min()} to {historical['date'].max()}")
 
         st.divider()
 
         # Settings
         st.subheader("Display Settings")
         show_historical = st.checkbox("Show Historical Charts", value=True)
-        historical_days = st.slider("Historical Days", 5, 90, 30)
 
 
     # Main content
-    # Get latest snapshot
-    snapshot = aggregator.get_latest_snapshot()
+    snapshot = risk_factors_store.get_latest_snapshot()
+    historical = risk_factors_store.load_historical_data()
 
-    # Try to load full historical data first, fall back to recent snapshots
-    historical = aggregator.load_full_historical_data()
-    if historical.empty:
-        # Fall back to recent daily snapshots if no full history
-        historical = aggregator.get_historical_data(days=historical_days)
-        if not historical.empty:
-            st.info("📊 Using recent daily snapshots (3-4 year historical data not yet loaded). See documentation for historical data setup.")
+    # Apply one date filter to every historical chart in the dashboard.
+    historical_view = historical.copy()
+    view_start = view_end = None
+    if not historical_view.empty:
+        historical_view["date"] = pd.to_datetime(historical_view["date"])
+        available_min = historical_view["date"].min().date()
+        available_max = historical_view["date"].max().date()
+
+        with st.sidebar:
+            st.subheader("Historical Period")
+            period_options = [
+                "All available",
+                "Last 30 days",
+                "Last 60 days",
+                "Last 90 days",
+                "Last 365 days",
+                "Current year",
+                "Custom range",
+            ]
+            selected_period = st.selectbox(
+                "Data shown in historical charts",
+                period_options,
+                index=0,
+                help="This filter applies to all risk factors and yield curve history.",
+            )
+
+            if selected_period == "Custom range":
+                selected_range = st.date_input(
+                    "Custom date range",
+                    value=(available_min, available_max),
+                    min_value=available_min,
+                    max_value=available_max,
+                )
+                if isinstance(selected_range, tuple) and len(selected_range) == 2:
+                    view_start, view_end = selected_range
+                else:
+                    view_start, view_end = available_min, available_max
+            elif selected_period == "All available":
+                view_start, view_end = available_min, available_max
+            elif selected_period == "Current year":
+                view_start, view_end = available_max.replace(month=1, day=1), available_max
+            else:
+                days = int(selected_period.split()[1])
+                view_end = available_max
+                view_start = max(available_min, view_end - timedelta(days=days - 1))
+
+        historical_view = historical_view[
+            (historical_view["date"].dt.date >= view_start)
+            & (historical_view["date"].dt.date <= view_end)
+        ].copy()
+        if historical_view.empty:
+            st.warning("No historical data is available in the selected period.")
 
     if snapshot is None:
-        st.warning("⚠️ No data available. Click 'Fetch Latest Snapshot' to get started.")
+        st.warning("⚠️ No data available. Refresh the Risk_Factors store first.")
         return
 
     # Header with timestamp
@@ -386,14 +473,14 @@ def main():
     with tabs[1]:
         st.subheader("⏰ All Metrics - Time Series Analysis (Up to 10 Years)")
         
-        if historical.empty:
+        if historical_view.empty:
             st.warning("⚠️ No historical data available. Click 'Fetch Historical Data' in sidebar to get started.")
         else:
             # Display date range
-            date_min = pd.to_datetime(historical['date']).min()
-            date_max = pd.to_datetime(historical['date']).max()
+            date_min = pd.to_datetime(historical_view['date']).min()
+            date_max = pd.to_datetime(historical_view['date']).max()
             date_range = f"{date_min.strftime('%Y-%m-%d')} to {date_max.strftime('%Y-%m-%d')}"
-            st.info(f"📅 Data Period: {date_range} ({len(historical)} trading days)")
+            st.info(f"📅 Data Period: {date_range} ({len(historical_view)} trading days)")
             
             # Date range selector for filtering
             col1, col2 = st.columns(2)
@@ -413,9 +500,9 @@ def main():
                 )
             
             # Filter data by date range
-            historical_filtered = historical[
-                (pd.to_datetime(historical['date']) >= pd.Timestamp(start_date)) &
-                (pd.to_datetime(historical['date']) <= pd.Timestamp(end_date))
+            historical_filtered = historical_view[
+                (pd.to_datetime(historical_view['date']) >= pd.Timestamp(start_date)) &
+                (pd.to_datetime(historical_view['date']) <= pd.Timestamp(end_date))
             ].copy()
             
             if len(historical_filtered) == 0:
@@ -452,7 +539,10 @@ def main():
                         height=600,
                         template='plotly_white'
                     )
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(
+                        apply_business_day_axis(fig, historical_filtered["date"]),
+                        use_container_width=True,
+                    )
                     
                     # Statistics table
                     st.subheader("Statistical Summary")
@@ -540,19 +630,29 @@ def main():
             if show_eq_returns:
                 st.session_state.show_eq_returns = True
 
+            equity_available = [
+                col for col in ["S&P 500", "EuroStoxx 50", "FTSE MIB"]
+                if col in historical.columns
+            ]
+            selected_equities = select_time_series(
+                "Equity series to display",
+                equity_available,
+                equity_available,
+                "equity_series_filter",
+            )
+
             # Prices view
-            if not st.session_state.show_eq_returns and show_historical and not historical.empty:
+            if not st.session_state.show_eq_returns and show_historical and not historical_view.empty:
                 st.subheader("Equity Indices - Price Trends")
                 
-                equity_cols = ["S&P 500", "EuroStoxx 50", "FTSE MIB"]
-                equity_cols = [col for col in equity_cols if col in historical.columns]
+                equity_cols = selected_equities
 
                 if equity_cols:
                     fig = go.Figure()
                     for col in equity_cols:
                         fig.add_trace(go.Scatter(
-                            x=historical['date'],
-                            y=historical[col],
+                            x=historical_view['date'],
+                            y=historical_view[col],
                             mode='lines+markers',
                             name=col,
                             hovertemplate='<b>%{fullData.name}</b><br>Date: %{x}<br>Value: %{y:.2f}<extra></extra>'
@@ -566,21 +666,33 @@ def main():
                         height=500,
                         template='plotly_white'
                     )
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(
+                        apply_business_day_axis(fig, historical_view["date"]),
+                        use_container_width=True,
+                    )
 
             # Returns view
             elif st.session_state.show_eq_returns:
                 st.subheader("Equity Indices - 10-Day Returns (%)")
                 
                 returns_calc = ReturnsCalculator()
-                returns_df, organized_returns = returns_calc.load_and_calculate_returns()
+                returns_df = returns_calc.calculate_10d_returns(historical)
+                organized_returns = returns_calc.get_returns_by_asset_class(returns_df)
+                returns_df = filter_date_frame(returns_df, view_start, view_end)
+                organized_returns = {
+                    name: filter_date_frame(frame, view_start, view_end)
+                    for name, frame in organized_returns.items()
+                }
                 
                 if not returns_df.empty and "equities" in organized_returns:
                     eq_returns = organized_returns["equities"]
+                    eq_returns = eq_returns[
+                        ["date"] + [col for col in selected_equities if col in eq_returns.columns]
+                    ]
                     
                     if not eq_returns.empty:
                         # Filter out date column and get metric columns
-                        eq_metrics = [col for col in eq_returns.columns if col != 'date']
+                        eq_metrics = [col for col in selected_equities if col in eq_returns.columns]
                         
                         # Plot returns
                         if eq_metrics:
@@ -602,7 +714,10 @@ def main():
                                 height=500,
                                 template='plotly_white'
                             )
-                            st.plotly_chart(fig, use_container_width=True)
+                            st.plotly_chart(
+                                apply_business_day_axis(fig, eq_returns["date"]),
+                                use_container_width=True,
+                            )
                         
                         # Statistics table
                         st.subheader("Returns Statistics")
@@ -669,26 +784,41 @@ def main():
             if show_ir_returns:
                 st.session_state.show_ir_returns = True
 
+            treasury_order = [
+                "US 1M Treasury", "US 3M Treasury", "US 6M Treasury",
+                "US 1Y Treasury", "US 2Y Treasury", "US 3Y Treasury",
+                "US 5Y Treasury", "US 7Y Treasury", "US 10Y Treasury",
+                "US 20Y Treasury", "US 30Y Treasury"
+            ]
+            estr_order = [
+                "ESTR ON", "ESTR 1W Realised", "ESTR 1M Realised",
+                "ESTR 3M Realised", "ESTR 6M Realised", "ESTR 12M Realised"
+            ]
+            ois_order = list(ECB_OIS_METRIC_TENORS)
+            rate_available = [
+                col for col in treasury_order + ois_order + ["EURIBOR 3M"] + estr_order
+                if col in historical.columns
+            ]
+            selected_rates = select_time_series(
+                "Interest-rate series to display",
+                rate_available,
+                TREASURY_DEFAULT_SERIES,
+                "interest_rate_series_filter",
+                "Default: key US Treasury and EUR OIS maturities commonly monitored by treasury teams.",
+            )
+
             # Prices view
-            if not st.session_state.show_ir_returns and show_historical and not historical.empty:
+            if not st.session_state.show_ir_returns and show_historical and not historical_view.empty:
                 st.subheader("Interest Rates - Price Trends")
                 
-                # Filter interest rate columns
-                treasury_order = [
-                    "US 1M Treasury", "US 3M Treasury", "US 6M Treasury",
-                    "US 1Y Treasury", "US 2Y Treasury", "US 3Y Treasury",
-                    "US 5Y Treasury", "US 7Y Treasury", "US 10Y Treasury",
-                    "US 20Y Treasury", "US 30Y Treasury"
-                ]
-                rate_cols = treasury_order + ["EURIBOR 3M"]
-                rate_cols = [col for col in rate_cols if col in historical.columns]
+                rate_cols = selected_rates
                 
                 if rate_cols:
                     fig = go.Figure()
                     for col in rate_cols:
                         fig.add_trace(go.Scatter(
-                            x=historical['date'],
-                            y=historical[col],
+                            x=historical_view['date'],
+                            y=historical_view[col],
                             mode='lines+markers',
                             name=col,
                             hovertemplate='<b>%{fullData.name}</b><br>Date: %{x}<br>Value: %{y:.2f}<extra></extra>'
@@ -702,18 +832,17 @@ def main():
                         height=500,
                         template='plotly_white'
                     )
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(
+                        apply_business_day_axis(fig, historical_view["date"]),
+                        use_container_width=True,
+                    )
 
-                estr_cols = [
-                    "ESTR ON", "ESTR 1W Realised", "ESTR 1M Realised",
-                    "ESTR 3M Realised", "ESTR 6M Realised", "ESTR 12M Realised"
-                ]
-                estr_cols = [col for col in estr_cols if col in historical.columns]
+                estr_cols = [col for col in estr_order if col in selected_rates]
                 if estr_cols:
                     st.subheader("€STR Realised Rates")
                     st.caption("Backward-looking ECB €STR and compounded €STR rates; these are not forward OIS curve points.")
 
-                    latest_estr = historical[['date'] + estr_cols].dropna(
+                    latest_estr = historical_view[['date'] + estr_cols].dropna(
                         subset=estr_cols,
                         how='all'
                     ).tail(1)
@@ -726,8 +855,8 @@ def main():
                     fig = go.Figure()
                     for col in estr_cols:
                         fig.add_trace(go.Scatter(
-                            x=historical['date'],
-                            y=historical[col],
+                            x=historical_view['date'],
+                            y=historical_view[col],
                             mode='lines',
                             name=col,
                             hovertemplate='<b>%{fullData.name}</b><br>Date: %{x}<br>Rate: %{y:.4f}%<extra></extra>'
@@ -740,21 +869,33 @@ def main():
                         height=420,
                         template='plotly_white'
                     )
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(
+                        apply_business_day_axis(fig, historical_view["date"]),
+                        use_container_width=True,
+                    )
 
             # Returns view
             elif st.session_state.show_ir_returns:
                 st.subheader("Interest Rates - 10-Day Returns (%)")
                 
                 returns_calc = ReturnsCalculator()
-                returns_df, organized_returns = returns_calc.load_and_calculate_returns()
+                returns_df = returns_calc.calculate_10d_returns(historical)
+                organized_returns = returns_calc.get_returns_by_asset_class(returns_df)
+                returns_df = filter_date_frame(returns_df, view_start, view_end)
+                organized_returns = {
+                    name: filter_date_frame(frame, view_start, view_end)
+                    for name, frame in organized_returns.items()
+                }
                 
                 if not returns_df.empty and "interest_rates" in organized_returns:
                     ir_returns = organized_returns["interest_rates"]
+                    ir_returns = ir_returns[
+                        ["date"] + [col for col in selected_rates if col in ir_returns.columns]
+                    ]
                     
                     if not ir_returns.empty:
                         # Filter out date column and get metric columns
-                        ir_metrics = [col for col in ir_returns.columns if col != 'date']
+                        ir_metrics = [col for col in selected_rates if col in ir_returns.columns]
                         
                         # Plot returns
                         if ir_metrics:
@@ -776,7 +917,10 @@ def main():
                                 height=500,
                                 template='plotly_white'
                             )
-                            st.plotly_chart(fig, use_container_width=True)
+                            st.plotly_chart(
+                                apply_business_day_axis(fig, ir_returns["date"]),
+                                use_container_width=True,
+                            )
                         
                         # Statistics table
                         st.subheader("Returns Statistics")
@@ -895,6 +1039,16 @@ def main():
             try:
                 ois_curve = build_eur_ois_curve(ois_input_quotes)
                 st.caption(f"Curve source: {ois_source_label}")
+                if (
+                    not use_manual_ois_quotes
+                    and source_dates
+                    and not historical.empty
+                    and pd.to_datetime(source_dates[-1]) < pd.to_datetime(historical["date"]).max()
+                ):
+                    st.warning(
+                        f"ECB OIS data is stale: last successful observation was {source_dates[-1]}. "
+                        "Refresh the Risk_Factors store after ECB connectivity is restored."
+                    )
 
                 fig = go.Figure()
                 fig.add_trace(go.Scatter(
@@ -951,7 +1105,7 @@ def main():
             "discounting curve because it can include sovereign, liquidity, scarcity, and basket-composition premia."
         )
         
-        if not historical.empty:
+        if not historical_view.empty:
             curve_definitions = {
                 "USD": {
                     "title": "USD Treasury Yield Curve",
@@ -1006,7 +1160,7 @@ def main():
             available_cols = [col for col in curve_columns if col in historical.columns]
             available_tenors = [curve_columns[col][0] for col in available_cols]
             available_labels = [curve_columns[col][1] for col in available_cols]
-            curve_history = historical[['date'] + available_cols].dropna(
+            curve_history = historical_view[['date'] + available_cols].dropna(
                 subset=available_cols,
                 how='all'
             ) if available_cols else pd.DataFrame()
@@ -1183,7 +1337,9 @@ def main():
                     selected_date_str = format_date_value(selected_date)
                     
                     # Get data for selected date
-                    selected_data = historical[historical['date'] == selected_date_str]
+                    selected_data = historical_view[
+                        historical_view["date"].dt.strftime("%Y-%m-%d") == selected_date_str
+                    ]
                     
                     if not selected_data.empty:
                         yields = [selected_data[col].iloc[0] if pd.notna(selected_data[col].iloc[0]) else None for col in available_cols]
@@ -1219,7 +1375,7 @@ def main():
                         # Show recent history of curve shape (last 10 trading days)
                         st.subheader("Recent Curve Shape History (Last 10 Days)")
                         
-                        recent_dates = historical[['date'] + available_cols].dropna(
+                        recent_dates = historical_view[['date'] + available_cols].dropna(
                             subset=available_cols,
                             how='all'
                         ).tail(10).copy()
@@ -1295,20 +1451,29 @@ def main():
             if show_cr_returns:
                 st.session_state.show_cr_returns = True
 
+            credit_available = [
+                col for col in ["VIX", "Investment Grade", "High Yield", "EUR Bond Index"]
+                if col in historical.columns
+            ]
+            selected_credit = select_time_series(
+                "Credit series to display",
+                credit_available,
+                credit_available,
+                "credit_series_filter",
+            )
+
             # Prices view
-            if not st.session_state.show_cr_returns and show_historical and not historical.empty:
+            if not st.session_state.show_cr_returns and show_historical and not historical_view.empty:
                 st.subheader("Credit Indices - Price Trends")
                 
-                # Filter credit columns
-                credit_cols = ["VIX", "Investment Grade", "High Yield", "EUR Bond Index"]
-                credit_cols = [col for col in credit_cols if col in historical.columns]
+                credit_cols = selected_credit
                 
                 if credit_cols:
                     fig = go.Figure()
                     for col in credit_cols:
                         fig.add_trace(go.Scatter(
-                            x=historical['date'],
-                            y=historical[col],
+                            x=historical_view['date'],
+                            y=historical_view[col],
                             mode='lines+markers',
                             name=col,
                             hovertemplate='<b>%{fullData.name}</b><br>Date: %{x}<br>Value: %{y:.2f}<extra></extra>'
@@ -1322,21 +1487,33 @@ def main():
                         height=500,
                         template='plotly_white'
                     )
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(
+                        apply_business_day_axis(fig, historical_view["date"]),
+                        use_container_width=True,
+                    )
 
             # Returns view
             elif st.session_state.show_cr_returns:
                 st.subheader("Credit Indices - 10-Day Returns (%)")
                 
                 returns_calc = ReturnsCalculator()
-                returns_df, organized_returns = returns_calc.load_and_calculate_returns()
+                returns_df = returns_calc.calculate_10d_returns(historical)
+                organized_returns = returns_calc.get_returns_by_asset_class(returns_df)
+                returns_df = filter_date_frame(returns_df, view_start, view_end)
+                organized_returns = {
+                    name: filter_date_frame(frame, view_start, view_end)
+                    for name, frame in organized_returns.items()
+                }
                 
                 if not returns_df.empty and "credit" in organized_returns:
                     cr_returns = organized_returns["credit"]
+                    cr_returns = cr_returns[
+                        ["date"] + [col for col in selected_credit if col in cr_returns.columns]
+                    ]
                     
                     if not cr_returns.empty:
                         # Filter out date column and get metric columns
-                        cr_metrics = [col for col in cr_returns.columns if col != 'date']
+                        cr_metrics = [col for col in selected_credit if col in cr_returns.columns]
                         
                         # Plot returns
                         if cr_metrics:
@@ -1358,7 +1535,10 @@ def main():
                                 height=500,
                                 template='plotly_white'
                             )
-                            st.plotly_chart(fig, use_container_width=True)
+                            st.plotly_chart(
+                                apply_business_day_axis(fig, cr_returns["date"]),
+                                use_container_width=True,
+                            )
                         
                         # Statistics table
                         st.subheader("Returns Statistics")
@@ -1395,7 +1575,7 @@ def main():
             st.info("No credit data available")
 
     # ========== FOREX TAB ==========
-    with tabs[5]:
+    with tabs[6]:
         st.subheader("💱 Foreign Exchange Rates")
 
         forex = snapshot['data'].get('forex', {})
@@ -1424,19 +1604,29 @@ def main():
             if show_fx_returns:
                 st.session_state.show_fx_returns = True
 
+            fx_available = [
+                col for col in ["EUR/USD", "EUR/GBP", "USD/JPY", "GBP/USD"]
+                if col in historical.columns
+            ]
+            selected_fx = select_time_series(
+                "FX series to display",
+                fx_available,
+                fx_available,
+                "fx_series_filter",
+            )
+
             # Prices view
-            if not st.session_state.show_fx_returns and show_historical and not historical.empty:
+            if not st.session_state.show_fx_returns and show_historical and not historical_view.empty:
                 st.subheader("FX Rates - Price Trends")
                 
-                fx_cols = ["EUR/USD", "EUR/GBP", "USD/JPY", "GBP/USD"]
-                fx_cols = [col for col in fx_cols if col in historical.columns]
+                fx_cols = selected_fx
 
                 if fx_cols:
                     fig = go.Figure()
                     for col in fx_cols:
                         fig.add_trace(go.Scatter(
-                            x=historical['date'],
-                            y=historical[col],
+                            x=historical_view['date'],
+                            y=historical_view[col],
                             mode='lines+markers',
                             name=col,
                             hovertemplate='<b>%{fullData.name}</b><br>Date: %{x}<br>Value: %{y:.6f}<extra></extra>'
@@ -1450,21 +1640,33 @@ def main():
                         height=500,
                         template='plotly_white'
                     )
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(
+                        apply_business_day_axis(fig, historical_view["date"]),
+                        use_container_width=True,
+                    )
 
             # Returns view
             elif st.session_state.show_fx_returns:
                 st.subheader("FX Rates - 10-Day Returns (%)")
                 
                 returns_calc = ReturnsCalculator()
-                returns_df, organized_returns = returns_calc.load_and_calculate_returns()
+                returns_df = returns_calc.calculate_10d_returns(historical)
+                organized_returns = returns_calc.get_returns_by_asset_class(returns_df)
+                returns_df = filter_date_frame(returns_df, view_start, view_end)
+                organized_returns = {
+                    name: filter_date_frame(frame, view_start, view_end)
+                    for name, frame in organized_returns.items()
+                }
                 
                 if not returns_df.empty and "forex" in organized_returns:
                     fx_returns = organized_returns["forex"]
+                    fx_returns = fx_returns[
+                        ["date"] + [col for col in selected_fx if col in fx_returns.columns]
+                    ]
                     
                     if not fx_returns.empty:
                         # Filter out date column and get metric columns
-                        fx_metrics = [col for col in fx_returns.columns if col != 'date']
+                        fx_metrics = [col for col in selected_fx if col in fx_returns.columns]
                         
                         # Plot returns
                         if fx_metrics:
@@ -1486,7 +1688,10 @@ def main():
                                 height=500,
                                 template='plotly_white'
                             )
-                            st.plotly_chart(fig, use_container_width=True)
+                            st.plotly_chart(
+                                apply_business_day_axis(fig, fx_returns["date"]),
+                                use_container_width=True,
+                            )
                         
                         # Statistics table
                         st.subheader("Returns Statistics")
@@ -1523,7 +1728,7 @@ def main():
             st.info("No FX data available")
 
     # ========== COMMODITIES TAB ==========
-    with tabs[6]:
+    with tabs[7]:
         st.subheader("⚫ Commodities Prices")
 
         commodities = snapshot['data'].get('commodities', {})
@@ -1552,19 +1757,29 @@ def main():
             if show_cm_returns:
                 st.session_state.show_cm_returns = True
 
+            commodity_available = [
+                col for col in ["Brent Crude", "Gold", "Natural Gas", "Silver"]
+                if col in historical.columns
+            ]
+            selected_commodities = select_time_series(
+                "Commodity series to display",
+                commodity_available,
+                commodity_available,
+                "commodity_series_filter",
+            )
+
             # Prices view
-            if not st.session_state.show_cm_returns and show_historical and not historical.empty:
+            if not st.session_state.show_cm_returns and show_historical and not historical_view.empty:
                 st.subheader("Commodities - Price Trends")
                 
-                commodity_cols = ["Brent Crude", "Gold", "Natural Gas", "Silver"]
-                commodity_cols = [col for col in commodity_cols if col in historical.columns]
+                commodity_cols = selected_commodities
 
                 if commodity_cols:
                     fig = go.Figure()
                     for col in commodity_cols:
                         fig.add_trace(go.Scatter(
-                            x=historical['date'],
-                            y=historical[col],
+                            x=historical_view['date'],
+                            y=historical_view[col],
                             mode='lines+markers',
                             name=col,
                             hovertemplate='<b>%{fullData.name}</b><br>Date: %{x}<br>Price: $%{y:.2f}<extra></extra>'
@@ -1578,21 +1793,33 @@ def main():
                         height=500,
                         template='plotly_white'
                     )
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(
+                        apply_business_day_axis(fig, historical_view["date"]),
+                        use_container_width=True,
+                    )
 
             # Returns view
             elif st.session_state.show_cm_returns:
                 st.subheader("Commodities - 10-Day Returns (%)")
                 
                 returns_calc = ReturnsCalculator()
-                returns_df, organized_returns = returns_calc.load_and_calculate_returns()
+                returns_df = returns_calc.calculate_10d_returns(historical)
+                organized_returns = returns_calc.get_returns_by_asset_class(returns_df)
+                returns_df = filter_date_frame(returns_df, view_start, view_end)
+                organized_returns = {
+                    name: filter_date_frame(frame, view_start, view_end)
+                    for name, frame in organized_returns.items()
+                }
                 
                 if not returns_df.empty and "commodities" in organized_returns:
                     cm_returns = organized_returns["commodities"]
+                    cm_returns = cm_returns[
+                        ["date"] + [col for col in selected_commodities if col in cm_returns.columns]
+                    ]
                     
                     if not cm_returns.empty:
                         # Filter out date column and get metric columns
-                        cm_metrics = [col for col in cm_returns.columns if col != 'date']
+                        cm_metrics = [col for col in selected_commodities if col in cm_returns.columns]
                         
                         # Plot returns
                         if cm_metrics:
@@ -1614,7 +1841,10 @@ def main():
                                 height=500,
                                 template='plotly_white'
                             )
-                            st.plotly_chart(fig, use_container_width=True)
+                            st.plotly_chart(
+                                apply_business_day_axis(fig, cm_returns["date"]),
+                                use_container_width=True,
+                            )
                         
                         # Statistics table
                         st.subheader("Returns Statistics")
@@ -1651,7 +1881,7 @@ def main():
             st.info("No commodity data available")
 
     # ========== CRYPTOCURRENCIES TAB ==========
-    with tabs[7]:
+    with tabs[8]:
         st.subheader("₿ Cryptocurrencies")
 
         cryptocurrencies = snapshot['data'].get('crypto', {})
@@ -1681,19 +1911,29 @@ def main():
             if show_cr_returns:
                 st.session_state.show_crypto_returns = True
 
+            crypto_available = [
+                col for col in ["Bitcoin", "Ethereum", "Binance Coin", "Solana"]
+                if col in historical.columns
+            ]
+            selected_crypto = select_time_series(
+                "Crypto series to display",
+                crypto_available,
+                ["Bitcoin", "Ethereum"],
+                "crypto_series_filter",
+            )
+
             # Prices view
-            if not st.session_state.show_crypto_returns and show_historical and not historical.empty:
+            if not st.session_state.show_crypto_returns and show_historical and not historical_view.empty:
                 st.subheader("Cryptocurrencies - Price Trends")
                 
-                crypto_cols = ["Bitcoin", "Ethereum", "Binance Coin", "Solana"]
-                crypto_cols = [col for col in crypto_cols if col in historical.columns]
+                crypto_cols = selected_crypto
 
                 if crypto_cols:
                     fig = go.Figure()
                     for col in crypto_cols:
                         fig.add_trace(go.Scatter(
-                            x=historical['date'],
-                            y=historical[col],
+                            x=historical_view['date'],
+                            y=historical_view[col],
                             mode='lines+markers',
                             name=col,
                             hovertemplate='<b>%{fullData.name}</b><br>Date: %{x}<br>Value: $%{y:.2f}<extra></extra>'
@@ -1707,21 +1947,33 @@ def main():
                         height=500,
                         template='plotly_white'
                     )
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(
+                        apply_business_day_axis(fig, historical_view["date"]),
+                        use_container_width=True,
+                    )
 
             # Returns view
             elif st.session_state.show_crypto_returns:
                 st.subheader("Cryptocurrencies - 10-Day Returns (%)")
                 
                 returns_calc = ReturnsCalculator()
-                returns_df, organized_returns = returns_calc.load_and_calculate_returns()
+                returns_df = returns_calc.calculate_10d_returns(historical)
+                organized_returns = returns_calc.get_returns_by_asset_class(returns_df)
+                returns_df = filter_date_frame(returns_df, view_start, view_end)
+                organized_returns = {
+                    name: filter_date_frame(frame, view_start, view_end)
+                    for name, frame in organized_returns.items()
+                }
                 
                 if not returns_df.empty and "crypto" in organized_returns:
                     crypto_returns = organized_returns["crypto"]
+                    crypto_returns = crypto_returns[
+                        ["date"] + [col for col in selected_crypto if col in crypto_returns.columns]
+                    ]
                     
                     if not crypto_returns.empty:
                         # Filter out date column and get metric columns
-                        crypto_metrics = [col for col in crypto_returns.columns if col != 'date']
+                        crypto_metrics = [col for col in selected_crypto if col in crypto_returns.columns]
                         
                         # Plot returns
                         if crypto_metrics:
@@ -1743,7 +1995,10 @@ def main():
                                 height=500,
                                 template='plotly_white'
                             )
-                            st.plotly_chart(fig, use_container_width=True)
+                            st.plotly_chart(
+                                apply_business_day_axis(fig, crypto_returns["date"]),
+                                use_container_width=True,
+                            )
                         
                         # Statistics table
                         st.subheader("Returns Statistics")
@@ -1794,4 +2049,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
